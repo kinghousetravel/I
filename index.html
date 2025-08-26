@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-
   <style>
     :root{
       --primary:#0b1220; --primary-90:#0b1220e6; --accent:#d4af37;
@@ -21,13 +20,11 @@
     body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji",sans-serif;color:var(--text);background:var(--bg);line-height:1.55;overflow-x:hidden}
     a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
     .container{width:min(1200px,92%);margin-inline:auto}
-
     /* PARTICLES BACKGROUND */
     #particles-js{
       position:fixed; inset:0; width:100%; height:100%;
       background:#0b1220; z-index:-1;
     }
-
     /* NAVBAR */
     .navbar{position:sticky;top:0;z-index:1000;backdrop-filter:saturate(180%) blur(8px);background:rgba(11,18,32,.75);color:#fff;transition:transform .35s ease, box-shadow .25s ease;border-bottom:1px solid rgba(212,175,55,.15)}
     .navbar--hidden{transform:translateY(-100%)} .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
@@ -57,20 +54,18 @@
     .mm-social{display:flex;gap:10px}
     .dim{position:fixed;inset:0;background:rgba(0,0,0,.35);backdrop-filter:blur(1px);opacity:0;visibility:hidden;transition:var(--tr);z-index:998}
     .dim.show{opacity:1;visibility:visible}
-
     /* HERO */
     .hero{position:relative;min-height:72svh;display:grid;place-items:center;text-align:center;color:#fff;padding:36px 0}
     .hero h1{font-size:clamp(28px,5.2vw,56px);line-height:1.12;margin:0 0 14px}
     .hero p{font-size:clamp(14px,2.2vw,20px);color:#d7dcef;margin:0 0 22px}
     .cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
     .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;font-weight:700;transition:var(--tr);border:2px solid var(--accent);background:var(--accent);color:var(--primary)}
-    /* прозора “glass” кнопка */
+    /* прозора "glass" кнопка */
     .btn.ghost{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));color:#fff;border:1.5px solid rgba(212,175,55,.55);box-shadow:0 10px 24px rgba(212,175,55,.18);backdrop-filter:blur(6px)}
     .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(212,175,55,.25)}
     .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:28px}
     .stat{background:var(--glass);border:1px solid rgba(212,175,55,.25);border-radius:12px;padding:14px}
     .stat .n{color:var(--accent);font-weight:800;font-size:clamp(20px,3.5vw,30px)}
-
     /* SECTIONS */
     section{padding:70px 0}
     .section-head{text-align:center;margin-bottom:30px}
@@ -79,14 +74,12 @@
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
     .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
     .grid-1{display:grid;grid-template-columns:1fr;gap:18px}
-
     .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .25s, box-shadow .25s;height:100%;display:flex;flex-direction:column;color:#e8ecf8}
     .card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(2,6,23,.16)}
     .card .media{height:200px;background:#16233c center/cover no-repeat}
     .card .body{padding:18px;display:flex;flex-direction:column;gap:10px;flex:1}
     .muted{color:#b6bfd6}
     .blog .media{height:210px}.blog .title{font-weight:800;font-size:1.15rem;color:#fff}
-
     /* CONTACT */
     .contact-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
     .info-block{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:20px;color:#e8ecf8}
@@ -103,7 +96,6 @@
     input::placeholder,textarea::placeholder{color:#aab2c5}
     input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(212,175,55,.12)}
     .submit{margin-top:10px}
-
     /* FOOTER */
     footer{background:rgba(11,18,32,.85);color:#cbd5e1;padding:44px 0;border-top:1px solid rgba(212,175,55,.15)}
     .f-top{display:grid;grid-template-columns:1.1fr .9fr .9fr;gap:22px;align-items:start}
@@ -111,7 +103,6 @@
     .f-links a{display:block;padding:6px 0;opacity:.9}
     .f-links a:hover{color:#fff}
     .copy{margin-top:16px;text-align:center;font-size:.9rem;color:#9aa3b2}
-
     /* CHATBOT */
     .chat-fab{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:999px;background:var(--accent);color:var(--primary);display:grid;place-items:center;box-shadow:0 12px 26px rgba(212,175,55,.35);cursor:pointer;z-index:1001}
     .chat-panel{position:fixed;right:18px;bottom:86px;width:min(92vw,380px);max-height:78vh;display:flex;flex-direction:column;border:1px solid rgba(255,255,255,.2);border-radius:16px;background:rgba(17,25,43,.98);color:#e8ecf8;box-shadow:var(--shadow);overflow:hidden;transform:translateY(20px);opacity:0;visibility:hidden;transition:var(--tr);z-index:1001}
@@ -122,7 +113,6 @@
     .chat-row input,.chat-row select,.chat-row textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff}
     .chat-actions{display:flex;gap:10px;justify-content:flex-end;padding:12px}
     .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-size:.78rem}
-
     /* MODALS (checkout) */
     .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.45);opacity:0;visibility:hidden;transition:var(--tr);z-index:1002;padding:14px}
     .modal.show{opacity:1;visibility:visible}
@@ -134,11 +124,73 @@
     .inline{display:flex;gap:10px}
     .qr{width:120px;height:120px;background:#0f1830;border-radius:10px;display:grid;place-items:center;border:1px dashed rgba(255,255,255,.25);color:#7f8bad}
     .badge{padding:4px 8px;border-radius:8px;background:#0f1830;font-size:.78rem;color:#cbd5e1;border:1px solid rgba(255,255,255,.18)}
-
     /* MUSIC TIP */
     .music-tip{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;background:rgba(0,0,0,.7);color:#fff;padding:10px 14px;border-radius:999px;display:none;z-index:1100}
     .music-tip.show{display:block}
-
+    /* MUSIC BUTTON */
+    .music-btn {
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--primary);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+      z-index: 1001;
+      transition: all 0.3s ease;
+    }
+    .music-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 16px rgba(212, 175, 55, 0.6);
+    }
+    .music-btn i {
+      font-size: 20px;
+    }
+    /* GOLDEN MOUSE TRAIL */
+    .mouse-trail {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.8) 0%, rgba(212, 175, 55, 0) 70%);
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: opacity 0.2s ease;
+    }
+    /* TRANSLATE WIDGET */
+    .translate-widget {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(11, 18, 32, 0.8);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 8px;
+      padding: 10px;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .translate-widget select {
+      background: var(--primary);
+      color: var(--text);
+      border: 1px solid var(--accent);
+      padding: 5px;
+      border-radius: 4px;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    .translate-widget i {
+      color: var(--accent);
+    }
     /* RESPONSIVE */
     @media (max-width:1024px){.grid-3{grid-template-columns:repeat(2,1fr)}.contact-wrap{grid-template-columns:1fr}.f-top{grid-template-columns:1fr 1fr}}
     @media (max-width:820px){.nav-links,.lang-switch,.cart{display:none}.hamburger{display:flex}}
@@ -148,30 +200,57 @@
 <body>
   <!-- PARTICLES BACKGROUND -->
   <div id="particles-js"></div>
-
   <!-- AUDIO (Deep House 2025) -->
   <!-- замініть шлях на свій файл MP3 -->
-  <audio id="bgAudio" src="Sunset Chill Out Music Zone Ibiza Summer Mix Ft Summer Time Chillout Music Ensemble .mp3" loop preload="auto"></audio>
+  <audio id="bgAudio" src="moby_-_porcelain_christian_lffler_remix_(z3.fm).mp3" loop preload="auto"></audio>
   <div id="musicTip" class="music-tip">Tap / Click to enable music 🔊</div>
-
+  
+  <!-- MUSIC BUTTON -->
+  <button class="music-btn" id="musicToggle" aria-label="Toggle music">
+    <i class="fa-solid fa-music"></i>
+  </button>
+  
+  <!-- TRANSLATE WIDGET -->
+  <div class="translate-widget">
+    <i class="fa-solid fa-language"></i>
+    <select id="languageSelect">
+      <option value="cz">Čeština</option>
+      <option value="de">Deutsch</option>
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="it">Italiano</option>
+      <option value="pl">Polski</option>
+      <option value="pt">Português</option>
+      <option value="ru">Русский</option>
+      <option value="uk">Українська</option>
+      <option value="zh">中文</option>
+      <option value="ja">日本語</option>
+      <option value="ko">한국어</option>
+      <option value="ar">العربية</option>
+      <option value="hi">हिन्दी</option>
+    </select>
+  </div>
+  
+  <!-- GOLDEN MOUSE TRAIL -->
+  <div class="mouse-trail" id="mouseTrail"></div>
+  
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
     <div class="container nav-inner">
       <a href="#home" class="brand">
         <!-- GIF-logo -->
-        <div class="brand-badge"><img id="logoGif" src="log.jpg" alt="KH logo"></div>
+        <div class="brand-badge"><img id="logoGif" src="/log.jpg" alt="KH logo"></div>
         <div class="brand-title">King Hous Travel</div>
       </a>
-
       <nav class="nav-links" aria-label="Primary">
-        <a href="#home">Domů</a>
-        <a href="#services">Služby</a>
-        <a href="#tours">Zájezdy</a>
-        <a href="#reviews">Recenze</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Kontakt</a>
+        <a href="#home" data-translate="home">Domů</a>
+        <a href="#services" data-translate="services">Služby</a>
+        <a href="#tours" data-translate="tours">Zájezdy</a>
+        <a href="#reviews" data-translate="reviews">Recenze</a>
+        <a href="#blog" data-translate="blog">Blog</a>
+        <a href="#contact" data-translate="contact">Kontakt</a>
       </nav>
-
       <div class="lang-switch">
         <button class="lang-btn active" data-lang="cz" aria-label="Čeština">CZ</button>
         <button class="lang-btn" data-lang="de" aria-label="Deutsch">DE</button>
@@ -179,14 +258,12 @@
         <button class="lang-btn" data-lang="uk" aria-label="Українська">UA</button>
         <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
       </div>
-
       <a class="icon-btn cart" href="javascript:void(0)" id="openCheckout" title="Košík">
         <i class="fa-solid fa-cart-shopping"></i><span class="cart-badge" id="cart-count">0</span>
       </a>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
-
   <!-- Mobile offcanvas -->
   <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mm-head">
@@ -195,15 +272,15 @@
       <button class="icon-btn" id="mmClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <nav class="mm-links" aria-label="Mobile">
-      <a href="#home" class="mm-link">Domů</a>
-      <a href="#services" class="mm-link">Služby</a>
-      <a href="#tours" class="mm-link">Zájezdy</a>
-      <a href="#reviews" class="mm-link">Recenze</a>
-      <a href="#blog" class="mm-link">Blog</a>
-      <a href="#contact" class="mm-link">Kontakt</a>
+      <a href="#home" class="mm-link" data-translate="home">Domů</a>
+      <a href="#services" class="mm-link" data-translate="services">Služby</a>
+      <a href="#tours" class="mm-link" data-translate="tours">Zájezdy</a>
+      <a href="#reviews" class="mm-link" data-translate="reviews">Recenze</a>
+      <a href="#blog" class="mm-link" data-translate="blog">Blog</a>
+      <a href="#contact" class="mm-link" data-translate="contact">Kontakt</a>
     </nav>
     <div class="mm-contact">
-      <strong>Rychlé kontakty</strong>
+      <strong data-translate="quickContacts">Rychlé kontakty</strong>
       <a href="mailto:kinghousetravel69@gmail.com"><i class="fa-solid fa-envelope"></i> kinghousetravel69@gmail.com</a>
       <a href="tel:+420731473473"><i class="fa-solid fa-phone"></i> +420&nbsp;731&nbsp;473&nbsp;473 (Brno)</a>
       <div class="mm-social">
@@ -214,188 +291,175 @@
     </div>
   </aside>
   <div class="dim" id="dim"></div>
-
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="container">
-      <h1>Objevte svět s námi</h1>
-      <p>Nezapomenutelné cesty, wellness a city-breaky. Profesionální servis od výběru po platbu.</p>
+      <h1 data-translate="heroTitle">Objevte svět s námi</h1>
+      <p data-translate="heroSubtitle">Nezapomenutelné cesty, wellness a city-breaky. Profesionální servis od výběru po platbu.</p>
       <div class="cta-row">
-        <a href="#tours" class="btn ghost">Prohlédnout zájezdy <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#contact" class="btn ghost">Kontaktovat <i class="fa-solid fa-phone"></i></a>
+        <a href="#tours" class="btn ghost" data-translate="viewTours">Prohlédnout zájezdy <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="btn ghost" data-translate="contactUs">Kontaktovat <i class="fa-solid fa-phone"></i></a>
       </div>
       <div class="stats">
-        <div class="stat"><div class="n">500+</div><div class="muted">Zájezdů</div></div>
-        <div class="stat"><div class="n">50+</div><div class="muted">Zemí</div></div>
-        <div class="stat"><div class="n">10 000+</div><div class="muted">Klientů</div></div>
-        <div class="stat"><div class="n">15</div><div class="muted">Let zkušeností</div></div>
+        <div class="stat"><div class="n">500+</div><div class="muted" data-translate="toursCount">Zájezdů</div></div>
+        <div class="stat"><div class="n">50+</div><div class="muted" data-translate="countriesCount">Zemí</div></div>
+        <div class="stat"><div class="n">10 000+</div><div class="muted" data-translate="clientsCount">Klientů</div></div>
+        <div class="stat"><div class="n">15</div><div class="muted" data-translate="experienceYears">Let zkušeností</div></div>
       </div>
     </div>
   </section>
-
   <!-- SERVICES -->
   <section id="services">
     <div class="container">
       <div class="section-head">
-        <h2>Naše služby</h2>
+        <h2 data-translate="servicesTitle">Naše služby</h2>
         <div class="bar"></div>
-        <p class="muted">Kompletní servis: výběr, rezervace, víza, pojištění, transfery, výlety.</p>
+        <p class="muted" data-translate="servicesSubtitle">Kompletní servis: výběr, rezervace, víza, pojištění, transfery, výlety.</p>
       </div>
-
       <div class="grid-3">
         <article class="card">
           <div class="media" style="background-image:url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&w=1200&q=60')"></div>
           <div class="body">
-            <h3>Individuální cesty</h3>
-            <p class="muted">Trasy na míru vašemu stylu a rozpočtu.</p>
-            <div style="margin-top:auto"><a class="btn ghost" href="#contact">Více</a></div>
+            <h3 data-translate="service1Title">Individuální cesty</h3>
+            <p class="muted" data-translate="service1Desc">Trasy na míru vašemu stylu a rozpočtu.</p>
+            <div style="margin-top:auto"><a class="btn ghost" href="#contact" data-translate="moreInfo">Více</a></div>
           </div>
         </article>
-
         <article class="card">
           <div class="media" style="background-image:url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=60')"></div>
           <div class="body">
-            <h3>Rezervace hotelů</h3>
-            <p class="muted">Prověření partneři a resorty.</p>
-            <div style="margin-top:auto"><a class="btn ghost" href="#contact">Více</a></div>
+            <h3 data-translate="service2Title">Rezervace hotelů</h3>
+            <p class="muted" data-translate="service2Desc">Prověření partneři a resorty.</p>
+            <div style="margin-top:auto"><a class="btn ghost" href="#contact" data-translate="moreInfo">Více</a></div>
           </div>
         </article>
-
         <article class="card">
           <div class="media" style="background-image:url('https://images.unsplash.com/photo-1491369173060-3f5b5d1d2f3a?auto=format&fit=crop&w=1200&q=60')"></div>
           <div class="body">
-            <h3>Lety a pojištění</h3>
-            <p class="muted">Optimální lety + cestovní pojištění.</p>
-            <div style="margin-top:auto"><a class="btn ghost" href="#contact">Více</a></div>
+            <h3 data-translate="service3Title">Lety a pojištění</h3>
+            <p class="muted" data-translate="service3Desc">Optimální lety + cestovní pojištění.</p>
+            <div style="margin-top:auto"><a class="btn ghost" href="#contact" data-translate="moreInfo">Více</a></div>
           </div>
         </article>
       </div>
     </div>
   </section>
-
   <!-- TOURS (prices in EUR) -->
   <section id="tours">
     <div class="container">
       <div class="section-head">
-        <h2>Oblíbené zájezdy</h2>
+        <h2 data-translate="toursTitle">Oblíbené zájezdy</h2>
         <div class="bar"></div>
-        <p class="muted">Vyberte si vysněný zájezd — od city-breaku po wellness dovolenou.</p>
+        <p class="muted" data-translate="toursSubtitle">Vyberte si vysněný zájezd — od city-breaku po wellness dovolenou.</p>
       </div>
-
       <div class="grid-3">
         <article class="card">
           <div class="media" style="background-image:url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=60')"></div>
           <div class="body">
-            <h3>Romantická Paříž</h3>
-            <p class="muted">3 dny / 2 noci • 2–4 osoby</p>
+            <h3 data-translate="tour1Title">Romantická Paříž</h3>
+            <p class="muted" data-translate="tour1Desc">3 dny / 2 noci • 2–4 osoby</p>
             <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
               <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="499">€499</strong>
-              <button class="btn ghost add" data-name="Romantická Paříž" data-price="499">Přidat</button>
+              <button class="btn ghost add" data-name="Romantická Paříž" data-price="499" data-translate="addToCart">Přidat</button>
             </div>
           </div>
         </article>
-
         <article class="card">
           <div class="media" style="background-image:url('https://images.unsplash.com/photo-1543429776-2782fcdfa3da?auto=format&fit=crop&w=1200&q=60')"></div>
           <div class="body">
-            <h3>Maledivy — water villas</h3>
-            <p class="muted">7 dní / 6 nocí • 2 osoby</p>
+            <h3 data-translate="tour2Title">Maledivy — water villas</h3>
+            <p class="muted" data-translate="tour2Desc">7 dní / 6 nocí • 2 osoby</p>
             <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
               <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="1890">€1 890</strong>
-              <button class="btn ghost add" data-name="Maledivy" data-price="1890">Přidat</button>
+              <button class="btn ghost add" data-name="Maledivy" data-price="1890" data-translate="addToCart">Přidat</button>
             </div>
           </div>
         </article>
-
         <article class="card">
           <div class="media" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=60')"></div>
           <div class="body">
-            <h3>Dubaj — orientální pohádky</h3>
-            <p class="muted">5 dní / 4 noci • 2–6 osob</p>
+            <h3 data-translate="tour3Title">Dubaj — orientální pohádky</h3>
+            <p class="muted" data-translate="tour3Desc">5 dní / 4 noci • 2–6 osob</p>
             <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto">
               <strong style="color:var(--accent);font-size:1.2rem" class="price" data-price="890">€890</strong>
-              <button class="btn ghost add" data-name="Dubaj" data-price="890">Přidat</button>
+              <button class="btn ghost add" data-name="Dubaj" data-price="890" data-translate="addToCart">Přidat</button>
             </div>
           </div>
         </article>
       </div>
     </div>
   </section>
-
   <!-- REVIEWS – foreigners -->
   <section id="reviews">
     <div class="container">
       <div class="section-head">
-        <h2>Hodnocení klientů</h2><div class="bar"></div>
+        <h2 data-translate="reviewsTitle">Hodnocení klientů</h2><div class="bar"></div>
       </div>
       <div class="grid-3">
-        <article class="card"><div class="body"><h3>Michael R. (UK)</h3><p class="muted">“Everything was seamless — flights, hotel, transfers. Highly recommend!”</p></div></article>
-        <article class="card"><div class="body"><h3>Giulia F. (IT)</h3><p class="muted">“Organizzazione perfetta! Il team ha curato ogni dettaglio.”</p></div></article>
-        <article class="card"><div class="body"><h3>Thomas K. (DE)</h3><p class="muted">„Top Service und super Ausflüge. Gerne wieder!“</p></div></article>
+        <article class="card"><div class="body"><h3>Michael R. (UK)</h3><p class="muted">"Everything was seamless — flights, hotel, transfers. Highly recommend!"</p></div></article>
+        <article class="card"><div class="body"><h3>Giulia F. (IT)</h3><p class="muted">"Organizzazione perfetta! Il team ha curato ogni dettaglio."</p></div></article>
+        <article class="card"><div class="body"><h3>Thomas K. (DE)</h3><p class="muted">"Top Service und super Ausflüge. Gerne wieder!"</p></div></article>
       </div>
     </div>
   </section>
-
   <!-- BLOG -->
   <section id="blog" class="blog">
     <div class="container">
       <div class="section-head">
-        <h2>Náš blog</h2><div class="bar"></div>
-        <p class="muted">Užitečné tipy, příběhy a novinky ze světa cestování</p>
+        <h2 data-translate="blogTitle">Náš blog</h2><div class="bar"></div>
+        <p class="muted" data-translate="blogSubtitle">Užitečné tipy, příběhy a novinky ze světa cestování</p>
       </div>
       <div class="grid-3">
         <article class="card blog">
           <div class="media" style="background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=60')"></div>
           <div class="body">
             <div class="muted"><i class="fa-regular fa-calendar"></i> 15/06/2025</div>
-            <div class="title">Top 10 míst na léto v Evropě</div>
-            <p class="muted">Od Středomoří po Alpy — výběr must-see.</p>
-            <a class="btn ghost" href="#">Číst dál</a>
+            <div class="title" data-translate="blog1Title">Top 10 míst na léto v Evropě</div>
+            <p class="muted" data-translate="blog1Desc">Od Středomoří po Alpy — výběr must-see.</p>
+            <a class="btn ghost" href="#" data-translate="readMore">Číst dál</a>
           </div>
         </article>
         <article class="card blog">
           <div class="media" style="background-image:url('https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1200&q=60')"></div>
           <div class="body">
             <div class="muted"><i class="fa-regular fa-calendar"></i> 02/06/2025</div>
-            <div class="title">Jak sbalit kufr bez přetížení</div>
-            <p class="muted">Seznam must-have + organizační triky.</p>
-            <a class="btn ghost" href="#">Číst dál</a>
+            <div class="title" data-translate="blog2Title">Jak sbalit kufr bez přetížení</div>
+            <p class="muted" data-translate="blog2Desc">Seznam must-have + organizační triky.</p>
+            <a class="btn ghost" href="#" data-translate="readMore">Číst dál</a>
           </div>
         </article>
         <article class="card blog">
           <div class="media" style="background-image:url('https://images.unsplash.com/photo-1519451243450-1a7c1a6b8a9c?auto=format&fit=crop&w=1200&q=60')"></div>
           <div class="body">
             <div class="muted"><i class="fa-regular fa-calendar"></i> 20/05/2025</div>
-            <div class="title">Nej pláže pro dokonalý relax</div>
-            <p class="muted">Maledivy, Karibik a tajné spoty.</p>
-            <a class="btn ghost" href="#">Číst dál</a>
+            <div class="title" data-translate="blog3Title">Nej pláže pro dokonalý relax</div>
+            <p class="muted" data-translate="blog3Desc">Maledivy, Karibik a tajné spoty.</p>
+            <a class="btn ghost" href="#" data-translate="readMore">Číst dál</a>
           </div>
         </article>
       </div>
     </div>
   </section>
-
   <!-- CONTACT -->
   <section id="contact">
     <div class="container">
       <div class="section-head">
-        <h2>Kontaktujte nás</h2><div class="bar"></div>
-        <p class="muted">Pište nebo volejte — rychle odpovíme a pomůžeme s výběrem.</p>
+        <h2 data-translate="contactTitle">Kontaktujte nás</h2><div class="bar"></div>
+        <p class="muted" data-translate="contactSubtitle">Pište nebo volejte — rychle odpovíme a pomůžeme s výběrem.</p>
       </div>
-
       <div class="contact-wrap">
         <div class="info-block">
           <div class="contact-item"><div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-            <div><strong>Adresa</strong><div class="muted">Brno, Czechia</div></div>
+            <div><strong data-translate="address">Adresa</strong><div class="muted">Brno, Czechia</div></div>
           </div>
           <div class="contact-item"><div class="icon"><i class="fa-solid fa-phone"></i></div>
-            <div><strong>Telefon</strong><div><a href="tel:+420731473473">+420&nbsp;731&nbsp;473&nbsp;473</a></div></div>
+            <div><strong data-translate="phone">Telefon</strong><div><a href="tel:+420731473473">+420&nbsp;731&nbsp;473&nbsp;473</a></div></div>
           </div>
           <div class="contact-item"><div class="icon"><i class="fa-solid fa-envelope"></i></div>
-            <div><strong>Email</strong><div><a href="mailto:kinghousetravel69@gmail.com">kinghousetravel69@gmail.com</a></div></div>
+            <div><strong data-translate="email">Email</strong><div><a href="mailto:kinghousetravel69@gmail.com">kinghousetravel69@gmail.com</a></div></div>
           </div>
           <div class="contact-item"><div class="icon"><i class="fa-solid fa-clock"></i></div>
-            <div><strong>Otevírací doba</strong><div class="muted">Po–Pá: 09:00–18:00 • So: 10:00–15:00</div></div>
+            <div><strong data-translate="openingHours">Otevírací doba</strong><div class="muted" data-translate="hours">Po–Pá: 09:00–18:00 • So: 10:00–15:00</div></div>
           </div>
           <div class="socials">
             <a href="https://wa.me/420731473473" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
@@ -404,63 +468,60 @@
             <a href="mailto:kinghousetravel69@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
           </div>
         </div>
-
         <form class="form" id="contactForm" novalidate>
           <div class="row">
-            <div><label for="name">Vaše jméno</label><input id="name" name="name" placeholder="Jméno" required /></div>
-            <div><label for="email">Email</label><input id="email" name="email" type="email" placeholder="your@email.com" required /></div>
+            <div><label for="name" data-translate="yourName">Vaše jméno</label><input id="name" name="name" placeholder="Jméno" required /></div>
+            <div><label for="email" data-translate="email">Email</label><input id="email" name="email" type="email" placeholder="your@email.com" required /></div>
           </div>
           <div class="row">
-            <div><label for="phone">Telefon</label><input id="phone" name="phone" placeholder="+420 731 473 473" /></div>
+            <div><label for="phone" data-translate="phone">Telefon</label><input id="phone" name="phone" placeholder="+420 731 473 473" /></div>
             <div>
-              <label for="topic">Téma</label>
+              <label for="topic" data-translate="topic">Téma</label>
               <select id="topic" name="topic" required>
-                <option value="">Vyberte téma</option>
-                <option>Rezervace zájezdu</option>
-                <option>Informace o zájezdech</option>
-                <option>Spolupráce</option>
-                <option>Jiné</option>
+                <option value="" data-translate="selectTopic">Vyberte téma</option>
+                <option data-translate="bookingTopic">Rezervace zájezdu</option>
+                <option data-translate="infoTopic">Informace o zájezdech</option>
+                <option data-translate="cooperationTopic">Spolupráce</option>
+                <option data-translate="otherTopic">Jiné</option>
               </select>
             </div>
           </div>
-          <div><label for="msg">Zpráva</label><textarea id="msg" name="msg" placeholder="Napište váš dotaz..." required></textarea></div>
-          <button class="btn ghost submit" type="submit">Odeslat zprávu</button>
+          <div><label for="msg" data-translate="message">Zpráva</label><textarea id="msg" name="msg" placeholder="Napište váš dotaz..." required></textarea></div>
+          <button class="btn ghost submit" type="submit" data-translate="sendMessage">Odeslat zprávu</button>
           <div id="formNote" class="muted" style="margin-top:8px"></div>
         </form>
       </div>
     </div>
   </section>
-
   <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="f-top">
         <div>
           <div class="f-brand">
-            <div class="brand-badge" style="width:38px;height:38px"><img src="assets/logo.gif" alt=""></div>
+            <div class="brand-badge" style="width:38px;height:38px"><img src="log.jpg" alt=""></div>
             <strong>King Hous Travel</strong>
           </div>
-          <p class="muted">Exkluzivní cesty, wellness retreaty a městské víkendy. Základna — Brno, Česko.</p>
+          <p class="muted" data-translate="footerDesc">Exkluzivní cesty, wellness retreaty a městské víkendy. Základna — Brno, Česko.</p>
         </div>
         <div class="f-links">
-          <strong>Stránky</strong>
-          <a href="#services">Služby</a>
-          <a href="#tours">Zájezdy</a>
-          <a href="#blog">Blog</a>
-          <a href="#contact">Kontakt</a>
+          <strong data-translate="pages">Stránky</strong>
+          <a href="#services" data-translate="services">Služby</a>
+          <a href="#tours" data-translate="tours">Zájezdy</a>
+          <a href="#blog" data-translate="blog">Blog</a>
+          <a href="#contact" data-translate="contact">Kontakt</a>
         </div>
         <div class="f-links">
-          <strong>Kontakty</strong>
+          <strong data-translate="contacts">Kontakty</strong>
           <a href="mailto:kinghousetravel69@gmail.com"><i class="fa-solid fa-envelope"></i> kinghousetravel69@gmail.com</a>
           <a href="tel:+420731473473"><i class="fa-solid fa-phone"></i> +420 731 473 473</a>
           <a href="https://wa.me/420731473473"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
           <a href="https://t.me/+420731473473"><i class="fa-brands fa-telegram"></i> Telegram</a>
         </div>
       </div>
-      <div class="copy">© <span id="year"></span> King Hous Travel. Všechna práva vyhrazena.</div>
+      <div class="copy" data-translate="copyright">© <span id="year"></span> King Hous Travel. Všechna práva vyhrazena.</div>
     </div>
   </footer>
-
   <!-- CHATBOT FAB -->
   <button class="chat-fab" id="chatFab" title="Travel bot"><i class="fa-solid fa-comments"></i></button>
   <div class="chat-panel" id="chatPanel" role="dialog" aria-modal="true" aria-hidden="true">
@@ -469,16 +530,16 @@
       <button class="icon-btn" id="chatClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="chat-body">
-      <div class="chat-row"><label>Kam chcete jet?</label><input id="bPlace" placeholder="Paris / Maldives / Dubai..." /></div>
+      <div class="chat-row"><label data-translate="destination">Kam chcete jet?</label><input id="bPlace" placeholder="Paris / Maldives / Dubai..." /></div>
       <div class="chat-row inline">
-        <div style="flex:1"><label>Od</label><input id="bFrom" type="date" /></div>
-        <div style="flex:1"><label>Do</label><input id="bTo" type="date" /></div>
+        <div style="flex:1"><label data-translate="from">Od</label><input id="bFrom" type="date" /></div>
+        <div style="flex:1"><label data-translate="to">Do</label><input id="bTo" type="date" /></div>
       </div>
       <div class="chat-row inline">
-        <div style="flex:1"><label>Osob</label><input id="bPeople" type="number" min="1" value="2" /></div>
-        <div style="flex:1"><label>Rozpočet (€)</label><input id="bBudget" type="number" min="0" placeholder="1000" /></div>
+        <div style="flex:1"><label data-translate="people">Osob</label><input id="bPeople" type="number" min="1" value="2" /></div>
+        <div style="flex:1"><label data-translate="budget">Rozpočet (€)</label><input id="bBudget" type="number" min="0" placeholder="1000" /></div>
       </div>
-      <div class="chat-row"><label>Přání</label><textarea id="bNotes" placeholder="Hotel 4*, wellness, výlety..."></textarea></div>
+      <div class="chat-row"><label data-translate="wishes">Přání</label><textarea id="bNotes" placeholder="Hotel 4*, wellness, výlety..."></textarea></div>
     </div>
     <div class="chat-actions">
       <a class="btn ghost" id="sendWA"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
@@ -486,63 +547,58 @@
       <a class="btn" id="sendMail"><i class="fa-solid fa-envelope"></i> Email</a>
     </div>
   </div>
-
   <!-- CHECKOUT MODAL -->
   <div class="modal" id="checkoutModal" aria-hidden="true">
     <div class="modal-card">
       <div class="modal-head">
-        <strong>Dokončení objednávky</strong>
+        <strong data-translate="checkoutTitle">Dokončení objednávky</strong>
         <button class="icon-btn" id="closeCheckout" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
       </div>
       <div class="modal-body">
-        <div id="cartItems" class="badge">Košík je prázdný</div>
-
+        <div id="cartItems" class="badge" data-translate="emptyCart">Košík je prázdný</div>
         <div class="pay-grid" style="margin-top:12px">
           <!-- Card (DEMO) -->
           <div class="pay-box">
             <div class="inline" style="justify-content:space-between;align-items:center">
-              <h3 style="margin:0">Platba kartou</h3>
+              <h3 style="margin:0" data-translate="cardPayment">Platba kartou</h3>
               <span class="badge">DEMO</span>
             </div>
             <div class="row" style="margin-top:8px">
-              <div><label>Jméno na kartě</label><input id="ccName" placeholder="TETIANA KOTOLUP" /></div>
-              <div><label>Číslo karty</label><input id="ccNum" inputmode="numeric" maxlength="19" placeholder="4242 4242 4242 4242" /></div>
+              <div><label data-translate="cardName">Jméno na kartě</label><input id="ccName" placeholder="TETIANA KOTOLUP" /></div>
+              <div><label data-translate="cardNumber">Číslo karty</label><input id="ccNum" inputmode="numeric" maxlength="19" placeholder="4242 4242 4242 4242" /></div>
             </div>
             <div class="row">
-              <div><label>Platnost</label><input id="ccExp" placeholder="MM/YY" maxlength="5" /></div>
-              <div><label>CVV</label><input id="ccCvv" placeholder="123" maxlength="4" /></div>
+              <div><label data-translate="cardExpiry">Platnost</label><input id="ccExp" placeholder="MM/YY" maxlength="5" /></div>
+              <div><label data-translate="cardCvv">CVV</label><input id="ccCvv" placeholder="123" maxlength="4" /></div>
             </div>
-            <button class="btn" id="payCard" style="margin-top:8px">Zaplatit</button>
+            <button class="btn" id="payCard" style="margin-top:8px" data-translate="payButton">Zaplatit</button>
             <div id="cardNote" class="muted" style="margin-top:6px"></div>
           </div>
           <!-- Alt methods -->
           <div class="pay-box">
-            <h3 style="margin:0">Další způsoby</h3>
-            <p class="muted">Můžete zaplatit přes PayPal nebo SEPA bankovním převodem v EUR.</p>
+            <h3 style="margin:0" data-translate="otherPayment">Další způsoby</h3>
+            <p class="muted" data-translate="paymentDesc">Můžete zaplatit přes PayPal nebo SEPA bankovním převodem v EUR.</p>
             <a class="btn ghost" id="payPaypal" href="mailto:kinghousetravel69@gmail.com?subject=PayPal%20Invoice%20Request">
-              <i class="fa-brands fa-paypal"></i> Vyžádat PayPal fakturu
+              <i class="fa-brands fa-paypal"></i> <span data-translate="paypalRequest">Vyžádat PayPal fakturu</span>
             </a>
             <div style="margin-top:8px">
               <div class="badge">SEPA Bank Transfer (€)</div>
               <div class="muted" style="margin-top:6px">
                 <div>IBAN: <strong>—</strong> • BIC: <strong>—</strong></div>
-                <div>Napište nám pro vystavení faktury s údaji.</div>
+                <div data-translate="invoiceRequest">Napište nám pro vystavení faktury s údaji.</div>
               </div>
             </div>
             <div style="margin-top:12px" class="inline">
               <div class="qr">QR</div>
-              <div class="muted"><strong>USDT TRC20 (volitelné)</strong><br/>TFA319WbHsYfhYqVa67vXiwboxioBQM82R</div>
+              <div class="muted"><strong data-translate="cryptoPayment">USDT TRC20 (volitelné)</strong><br/>TFA319WbHsYfhYqVa67vXiwboxioBQM82R</div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
-
   <!-- LIBS -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
   <script>
     /* ===== Particles config (dark blue + golden) ===== */
     particlesJS("particles-js",{
@@ -562,7 +618,6 @@
       },
       retina_detect:true
     });
-
     /* ===== Navbar autohide ===== */
     (function(){
       const nav = document.getElementById('navbar');
@@ -575,7 +630,6 @@
       }
       window.addEventListener('scroll', () => { if(!ticking){ window.requestAnimationFrame(onScroll); ticking = true; } });
     })();
-
     /* ===== Mobile menu ===== */
     const burger = document.getElementById('hamburger');
     const mm = document.getElementById('mobileMenu');
@@ -586,41 +640,37 @@
     function closeMM(){ mm.classList.remove('active'); dim.classList.remove('show'); burger.classList.remove('active'); burger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
     burger.addEventListener('click', () => mm.classList.contains('active') ? closeMM() : openMM());
     mmClose.addEventListener('click', closeMM); dim.addEventListener('click', closeMM); mmLinks.forEach(a => a.addEventListener('click', closeMM));
-
     /* ===== Prices/Currency — EUR ===== */
     const EUR = new Intl.NumberFormat('de-DE', {style:'currency', currency:'EUR'});
     document.querySelectorAll('.price').forEach(el=>{
       const p = +el.dataset.price;
       el.textContent = EUR.format(p);
     });
-
     /* ===== Cart / Checkout (EUR) ===== */
     const countEl = document.getElementById('cart-count');
     const cart = [];
     function renderCart(){
       const wrap = document.getElementById('cartItems');
-      if (cart.length===0){ wrap.className='badge'; wrap.textContent = 'Košík je prázdný'; return; }
+      if (cart.length===0){ wrap.className='badge'; wrap.textContent = translations[currentLang].emptyCart || 'Košík je prázdný'; return; }
       wrap.classList.remove('badge'); wrap.innerHTML = '';
       const ul = document.createElement('ul'); ul.style.margin='0'; ul.style.padding='0 0 0 16px';
       let total = 0;
       cart.forEach(it=>{ total += it.price; const li = document.createElement('li'); li.textContent = `${it.name} — ${EUR.format(it.price)}`; ul.appendChild(li); });
       wrap.appendChild(ul);
-      const t = document.createElement('div'); t.style.marginTop='8px'; t.innerHTML = `<strong>SUMA: ${EUR.format(total)}</strong>`;
+      const t = document.createElement('div'); t.style.marginTop='8px'; t.innerHTML = `<strong>${translations[currentLang].total || 'SUMA'}: ${EUR.format(total)}</strong>`;
       wrap.appendChild(t);
     }
     document.querySelectorAll('.add').forEach(btn=>{
       btn.addEventListener('click', ()=>{
         cart.push({name:btn.dataset.name, price:+btn.dataset.price});
         countEl.textContent = cart.length;
-        btn.textContent = 'Přidáno ✓';
-        setTimeout(()=>btn.textContent='Přidat',1200);
+        btn.textContent = translations[currentLang].added || 'Přidáno ✓';
+        setTimeout(()=>btn.textContent=translations[currentLang].addToCart || 'Přidat',1200);
       });
     });
-
     const checkoutModal = document.getElementById('checkoutModal');
     document.getElementById('openCheckout').addEventListener('click', ()=>{ renderCart(); checkoutModal.classList.add('show'); });
     document.getElementById('closeCheckout').addEventListener('click', ()=> checkoutModal.classList.remove('show'));
-
     // Demo card payment
     const ccNum = document.getElementById('ccNum');
     ccNum.addEventListener('input', e=>{
@@ -628,20 +678,21 @@
       e.target.value = v;
     });
     document.getElementById('payCard').addEventListener('click', ()=>{
-      if(cart.length===0){ alert('Košík je prázdný'); return; }
+      if(cart.length===0){ alert(translations[currentLang].emptyCart || 'Košík je prázdný'); return; }
       const ok = document.getElementById('ccName').value && document.getElementById('ccNum').value.length>=19 && document.getElementById('ccExp').value && document.getElementById('ccCvv').value.length>=3;
       const note = document.getElementById('cardNote');
-      if(!ok){ note.textContent = 'Chyba: zkontrolujte údaje karty.'; return; }
-      note.textContent = 'Platba v demo režimu proběhla úspěšně ✅. Potvrzení vám zašleme emailem.';
+      if(!ok){ note.textContent = translations[currentLang].cardError || 'Chyba: zkontrolujte údaje karty.'; return; }
+      note.textContent = translations[currentLang].paymentSuccess || 'Platba v demo režimu proběhla úspěšně ✅. Potvrzení vám zašleme emailem.';
       setTimeout(()=>{ checkoutModal.classList.remove('show'); }, 1200);
     });
-
     /* ===== Contact form (demo) ===== */
     const form = document.getElementById('contactForm'), note = document.getElementById('formNote');
     form.addEventListener('submit', (e)=>{
-      e.preventDefault(); note.textContent = 'Děkujeme! Ozveme se na ' + (form.email.value || 'zadaný kontakt') + '.'; form.reset();
+      e.preventDefault(); 
+      const email = form.email.value || 'zadaný kontakt';
+      note.textContent = (translations[currentLang].formSuccess || 'Děkujeme! Ozveme se na ') + email + '.'; 
+      form.reset();
     });
-
     /* ===== Chatbot ===== */
     const chatFab = document.getElementById('chatFab'), chatPanel = document.getElementById('chatPanel'), chatClose = document.getElementById('chatClose');
     chatFab.addEventListener('click', ()=> chatPanel.classList.toggle('show'));
@@ -653,7 +704,7 @@
       const people = document.getElementById('bPeople').value || '2';
       const budget = document.getElementById('bBudget').value || '-';
       const notes = document.getElementById('bNotes').value || '-';
-      return `Dobrý den! Chci zájezd.\nDestinace: ${place}\nTermín: ${from} → ${to}\nOsob: ${people}\nRozpočet: €${budget}\nPřání: ${notes}\n\nKontakt: +420 731 473 473 | kinghousetravel69@gmail.com`;
+      return `${translations[currentLang].chatMessage || 'Dobrý den! Chci zájezd.'}\n${translations[currentLang].destination || 'Destinace'}: ${place}\n${translations[currentLang].from || 'Termín'}: ${from} → ${to}\n${translations[currentLang].people || 'Osob'}: ${people}\n${translations[currentLang].budget || 'Rozpočet'}: €${budget}\n${translations[currentLang].wishes || 'Přání'}: ${notes}\n\n${translations[currentLang].contactInfo || 'Kontakt'}: +420 731 473 473 | kinghousetravel69@gmail.com`;
     }
     document.getElementById('sendWA').addEventListener('click', ()=>{
       const txt = encodeURIComponent(buildMessage());
@@ -667,25 +718,1548 @@
       const txt = encodeURIComponent(buildMessage());
       window.location.href = `mailto:kinghousetravel69@gmail.com?subject=Tour%20request&body=${txt}`;
     });
-
     /* ===== Year ===== */
     document.getElementById('year').textContent = new Date().getFullYear();
-
     /* ===== MUSIC AUTOPLAY with gesture fallback ===== */
     const audio = document.getElementById('bgAudio');
     const tip = document.getElementById('musicTip');
+    const musicToggle = document.getElementById('musicToggle');
+    let isPlaying = false;
+    
     audio.volume = 0.6;
+    
+    // Initialize music button state
+    musicToggle.innerHTML = '<i class="fa-solid fa-music"></i>';
+    
+    // Music toggle functionality
+    musicToggle.addEventListener('click', () => {
+      if (isPlaying) {
+        audio.pause();
+        musicToggle.innerHTML = '<i class="fa-solid fa-music"></i>';
+        isPlaying = false;
+      } else {
+        audio.play().catch(e => console.log("Autoplay prevented:", e));
+        musicToggle.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        isPlaying = true;
+      }
+    });
+    
+    // Initial play attempt with fallback
     audio.play().catch(()=>{
       tip.classList.add('show');
       const enable = ()=>{
         audio.play().finally(()=> tip.classList.remove('show'));
+        musicToggle.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        isPlaying = true;
         window.removeEventListener('pointerdown', enable);
         window.removeEventListener('keydown', enable);
       };
       window.addEventListener('pointerdown', enable, {once:true});
       window.addEventListener('keydown', enable, {once:true});
     });
+    
+    // Update music button when audio ends
+    audio.addEventListener('ended', () => {
+      musicToggle.innerHTML = '<i class="fa-solid fa-music"></i>';
+      isPlaying = false;
+    });
+    
+    /* ===== GOLDEN MOUSE TRAIL ===== */
+    const mouseTrail = document.getElementById('mouseTrail');
+    let mouseX = 0, mouseY = 0;
+    let trailX = 0, trailY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      mouseTrail.style.opacity = '0.7';
+    });
+    
+    function animateTrail() {
+      // Smooth movement of the trail following the cursor
+      trailX += (mouseX - trailX) * 0.1;
+      trailY += (mouseY - trailY) * 0.1;
+      
+      mouseTrail.style.left = `${trailX}px`;
+      mouseTrail.style.top = `${trailY}px`;
+      
+      requestAnimationFrame(animateTrail);
+    }
+    
+    animateTrail();
+    
+    // Hide trail when mouse stops moving
+    let trailTimeout;
+    document.addEventListener('mousemove', () => {
+      clearTimeout(trailTimeout);
+      trailTimeout = setTimeout(() => {
+        mouseTrail.style.opacity = '0';
+      }, 1000);
+    });
+    
+    /* ===== TRANSLATION FUNCTIONALITY ===== */
+    const translations = {
+      cz: {
+        home: "Domů",
+        services: "Služby",
+        tours: "Zájezdy",
+        reviews: "Recenze",
+        blog: "Blog",
+        contact: "Kontakt",
+        heroTitle: "Objevte svět s námi",
+        heroSubtitle: "Nezapomenutelné cesty, wellness a city-breaky. Profesionální servis od výběru po platbu.",
+        viewTours: "Prohlédnout zájezdy",
+        contactUs: "Kontaktovat",
+        toursCount: "Zájezdů",
+        countriesCount: "Zemí",
+        clientsCount: "Klientů",
+        experienceYears: "Let zkušeností",
+        servicesTitle: "Naše služby",
+        servicesSubtitle: "Kompletní servis: výběr, rezervace, víza, pojištění, transfery, výlety.",
+        service1Title: "Individuální cesty",
+        service1Desc: "Trasy na míru vašemu stylu a rozpočtu.",
+        service2Title: "Rezervace hotelů",
+        service2Desc: "Prověření partneři a resorty.",
+        service3Title: "Lety a pojištění",
+        service3Desc: "Optimální lety + cestovní pojištění.",
+        moreInfo: "Více",
+        toursTitle: "Oblíbené zájezdy",
+        toursSubtitle: "Vyberte si vysněný zájezd — od city-breaku po wellness dovolenou.",
+        tour1Title: "Romantická Paříž",
+        tour1Desc: "3 dny / 2 noci • 2–4 osoby",
+        tour2Title: "Maledivy — water villas",
+        tour2Desc: "7 dní / 6 nocí • 2 osoby",
+        tour3Title: "Dubaj — orientální pohádky",
+        tour3Desc: "5 dní / 4 noci • 2–6 osob",
+        addToCart: "Přidat",
+        added: "Přidáno ✓",
+        reviewsTitle: "Hodnocení klientů",
+        blogTitle: "Náš blog",
+        blogSubtitle: "Užitečné tipy, příběhy a novinky ze světa cestování",
+        blog1Title: "Top 10 míst na léto v Evropě",
+        blog1Desc: "Od Středomoří po Alpy — výběr must-see.",
+        blog2Title: "Jak sbalit kufr bez přetížení",
+        blog2Desc: "Seznam must-have + organizační triky.",
+        blog3Title: "Nej pláže pro dokonalý relax",
+        blog3Desc: "Maledivy, Karibik a tajné spoty.",
+        readMore: "Číst dál",
+        contactTitle: "Kontaktujte nás",
+        contactSubtitle: "Pište nebo volejte — rychle odpovíme a pomůžeme s výběrem.",
+        address: "Adresa",
+        phone: "Telefon",
+        email: "Email",
+        openingHours: "Otevírací doba",
+        hours: "Po–Pá: 09:00–18:00 • So: 10:00–15:00",
+        yourName: "Vaše jméno",
+        topic: "Téma",
+        selectTopic: "Vyberte téma",
+        bookingTopic: "Rezervace zájezdu",
+        infoTopic: "Informace o zájezdech",
+        cooperationTopic: "Spolupráce",
+        otherTopic: "Jiné",
+        message: "Zpráva",
+        sendMessage: "Odeslat zprávu",
+        formSuccess: "Děkujeme! Ozveme se na ",
+        pages: "Stránky",
+        contacts: "Kontakty",
+        footerDesc: "Exkluzivní cesty, wellness retreaty a městské víkendy. Základna — Brno, Česko.",
+        copyright: "© ",
+        emptyCart: "Košík je prázdný",
+        total: "SUMA",
+        checkoutTitle: "Dokončení objednávky",
+        cardPayment: "Platba kartou",
+        cardName: "Jméno na kartě",
+        cardNumber: "Číslo karty",
+        cardExpiry: "Platnost",
+        cardCvv: "CVV",
+        payButton: "Zaplatit",
+        cardError: "Chyba: zkontrolujte údaje karty.",
+        paymentSuccess: "Platba v demo režimu proběhla úspěšně ✅. Potvrzení vám zašleme emailem.",
+        otherPayment: "Další způsoby",
+        paymentDesc: "Můžete zaplatit přes PayPal nebo SEPA bankovním převodem v EUR.",
+        paypalRequest: "Vyžádat PayPal fakturu",
+        invoiceRequest: "Napište nám pro vystavení faktury s údaji.",
+        cryptoPayment: "USDT TRC20 (volitelné)",
+        destination: "Kam chcete jet?",
+        from: "Od",
+        to: "Do",
+        people: "Osob",
+        budget: "Rozpočet (€)",
+        wishes: "Přání",
+        chatMessage: "Dobrý den! Chci zájezd.",
+        contactInfo: "Kontakt",
+        quickContacts: "Rychlé kontakty"
+      },
+      de: {
+        home: "Startseite",
+        services: "Dienstleistungen",
+        tours: "Reisen",
+        reviews: "Bewertungen",
+        blog: "Blog",
+        contact: "Kontakt",
+        heroTitle: "Entdecken Sie die Welt mit uns",
+        heroSubtitle: "Unvergessliche Reisen, Wellness und Städtereisen. Professioneller Service von Auswahl bis Zahlung.",
+        viewTours: "Reisen ansehen",
+        contactUs: "Kontaktieren Sie uns",
+        toursCount: "Reisen",
+        countriesCount: "Länder",
+        clientsCount: "Kunden",
+        experienceYears: "Jahre Erfahrung",
+        servicesTitle: "Unsere Dienstleistungen",
+        servicesSubtitle: "Komplettservice: Auswahl, Buchung, Visa, Versicherung, Transfers, Ausflüge.",
+        service1Title: "Individuelle Reisen",
+        service1Desc: "Reiserouten nach Ihrem Stil und Budget.",
+        service2Title: "Hotelpreise",
+        service2Desc: "Verifizierte Partner und Resorts.",
+        service3Title: "Flüge und Versicherung",
+        service3Desc: "Optimale Flüge + Reiseversicherung.",
+        moreInfo: "Mehr",
+        toursTitle: "Beliebte Reisen",
+        toursSubtitle: "Wählen Sie Ihren Traumurlaub — vom Städteurlaub bis zum Wellness-Urlaub.",
+        tour1Title: "Romantisches Paris",
+        tour1Desc: "3 Tage / 2 Nächte • 2–4 Personen",
+        tour2Title: "Malediven — Wasser-Villas",
+        tour2Desc: "7 Tage / 6 Nächte • 2 Personen",
+        tour3Title: "Dubai — orientalische Märchen",
+        tour3Desc: "5 Tage / 4 Nächte • 2–6 Personen",
+        addToCart: "Hinzufügen",
+        added: "Hinzugefügt ✓",
+        reviewsTitle: "Kundenbewertungen",
+        blogTitle: "Unser Blog",
+        blogSubtitle: "Nützliche Tipps, Geschichten und Neuigkeiten aus der Reisewelt",
+        blog1Title: "Top 10 Sommerziele in Europa",
+        blog1Desc: "Vom Mittelmeer bis zu den Alpen — eine Auswahl der Must-Sees.",
+        blog2Title: "Wie man den Koffer ohne Überladung packt",
+        blog2Desc: "Must-Have-Liste + Organisationstipps.",
+        blog3Title: "Die besten Strände für perfekte Entspannung",
+        blog3Desc: "Malediven, Karibik und geheime Spots.",
+        readMore: "Weiterlesen",
+        contactTitle: "Kontaktieren Sie uns",
+        contactSubtitle: "Schreiben oder rufen Sie an — wir antworten schnell und helfen bei der Auswahl.",
+        address: "Adresse",
+        phone: "Telefon",
+        email: "E-Mail",
+        openingHours: "Öffnungszeiten",
+        hours: "Mo–Fr: 09:00–18:00 • Sa: 10:00–15:00",
+        yourName: "Ihr Name",
+        topic: "Thema",
+        selectTopic: "Thema auswählen",
+        bookingTopic: "Reisebuchung",
+        infoTopic: "Informationen zu Reisen",
+        cooperationTopic: "Zusammenarbeit",
+        otherTopic: "Andere",
+        message: "Nachricht",
+        sendMessage: "Nachricht senden",
+        formSuccess: "Danke! Wir melden uns bei ",
+        pages: "Seiten",
+        contacts: "Kontakte",
+        footerDesc: "Exklusive Reisen, Wellness-Retreats und Städtewochenenden. Basis — Brünn, Tschechien.",
+        copyright: "© ",
+        emptyCart: "Warenkorb ist leer",
+        total: "SUMME",
+        checkoutTitle: "Bestellung abschließen",
+        cardPayment: "Kartenzahlung",
+        cardName: "Name auf der Karte",
+        cardNumber: "Kartennummer",
+        cardExpiry: "Gültigkeit",
+        cardCvv: "CVV",
+        payButton: "Bezahlen",
+        cardError: "Fehler: Überprüfen Sie die Kartendaten.",
+        paymentSuccess: "Die Zahlung im Demo-Modus war erfolgreich ✅. Wir senden Ihnen eine Bestätigung per E-Mail.",
+        otherPayment: "Andere Zahlungsmethoden",
+        paymentDesc: "Sie können mit PayPal oder per SEPA-Überweisung in EUR bezahlen.",
+        paypalRequest: "PayPal-Rechnung anfordern",
+        invoiceRequest: "Schreiben Sie uns für die Ausstellung einer Rechnung mit Angaben.",
+        cryptoPayment: "USDT TRC20 (optional)",
+        destination: "Wohin möchten Sie reisen?",
+        from: "Von",
+        to: "Bis",
+        people: "Personen",
+        budget: "Budget (€)",
+        wishes: "Wünsche",
+        chatMessage: "Guten Tag! Ich möchte eine Reise buchen.",
+        contactInfo: "Kontakt",
+        quickContacts: "Schnellkontakte"
+      },
+      en: {
+        home: "Home",
+        services: "Services",
+        tours: "Tours",
+        reviews: "Reviews",
+        blog: "Blog",
+        contact: "Contact",
+        heroTitle: "Discover the world with us",
+        heroSubtitle: "Unforgettable journeys, wellness and city breaks. Professional service from selection to payment.",
+        viewTours: "View tours",
+        contactUs: "Contact us",
+        toursCount: "Tours",
+        countriesCount: "Countries",
+        clientsCount: "Clients",
+        experienceYears: "Years of experience",
+        servicesTitle: "Our services",
+        servicesSubtitle: "Complete service: selection, booking, visas, insurance, transfers, excursions.",
+        service1Title: "Individual journeys",
+        service1Desc: "Routes tailored to your style and budget.",
+        service2Title: "Hotel reservations",
+        service2Desc: "Verified partners and resorts.",
+        service3Title: "Flights and insurance",
+        service3Desc: "Optimal flights + travel insurance.",
+        moreInfo: "More",
+        toursTitle: "Popular tours",
+        toursSubtitle: "Choose your dream tour — from city breaks to wellness holidays.",
+        tour1Title: "Romantic Paris",
+        tour1Desc: "3 days / 2 nights • 2–4 people",
+        tour2Title: "Maldives — water villas",
+        tour2Desc: "7 days / 6 nights • 2 people",
+        tour3Title: "Dubai — oriental tales",
+        tour3Desc: "5 days / 4 nights • 2–6 people",
+        addToCart: "Add",
+        added: "Added ✓",
+        reviewsTitle: "Customer reviews",
+        blogTitle: "Our blog",
+        blogSubtitle: "Useful tips, stories and news from the travel world",
+        blog1Title: "Top 10 summer destinations in Europe",
+        blog1Desc: "From the Mediterranean to the Alps — a selection of must-sees.",
+        blog2Title: "How to pack a suitcase without overloading",
+        blog2Desc: "Must-have list + organizational tricks.",
+        blog3Title: "Best beaches for perfect relaxation",
+        blog3Desc: "Maldives, Caribbean and secret spots.",
+        readMore: "Read more",
+        contactTitle: "Contact us",
+        contactSubtitle: "Write or call — we'll respond quickly and help with your selection.",
+        address: "Address",
+        phone: "Phone",
+        email: "Email",
+        openingHours: "Opening hours",
+        hours: "Mon–Fri: 09:00–18:00 • Sat: 10:00–15:00",
+        yourName: "Your name",
+        topic: "Topic",
+        selectTopic: "Select topic",
+        bookingTopic: "Tour booking",
+        infoTopic: "Tour information",
+        cooperationTopic: "Cooperation",
+        otherTopic: "Other",
+        message: "Message",
+        sendMessage: "Send message",
+        formSuccess: "Thank you! We will contact you at ",
+        pages: "Pages",
+        contacts: "Contacts",
+        footerDesc: "Exclusive journeys, wellness retreats and city weekends. Base — Brno, Czechia.",
+        copyright: "© ",
+        emptyCart: "Cart is empty",
+        total: "TOTAL",
+        checkoutTitle: "Complete order",
+        cardPayment: "Card payment",
+        cardName: "Name on card",
+        cardNumber: "Card number",
+        cardExpiry: "Expiry",
+        cardCvv: "CVV",
+        payButton: "Pay",
+        cardError: "Error: check card details.",
+        paymentSuccess: "Payment in demo mode was successful ✅. We will send you a confirmation by email.",
+        otherPayment: "Other methods",
+        paymentDesc: "You can pay via PayPal or SEPA bank transfer in EUR.",
+        paypalRequest: "Request PayPal invoice",
+        invoiceRequest: "Write to us for issuing an invoice with details.",
+        cryptoPayment: "USDT TRC20 (optional)",
+        destination: "Where do you want to go?",
+        from: "From",
+        to: "To",
+        people: "People",
+        budget: "Budget (€)",
+        wishes: "Wishes",
+        chatMessage: "Hello! I want to book a tour.",
+        contactInfo: "Contact",
+        quickContacts: "Quick contacts"
+      },
+      es: {
+        home: "Inicio",
+        services: "Servicios",
+        tours: "Tours",
+        reviews: "Reseñas",
+        blog: "Blog",
+        contact: "Contacto",
+        heroTitle: "Descubre el mundo con nosotros",
+        heroSubtitle: "Viajes inolvidables, wellness y escapadas urbanas. Servicio profesional desde la selección hasta el pago.",
+        viewTours: "Ver tours",
+        contactUs: "Contáctanos",
+        toursCount: "Tours",
+        countriesCount: "Países",
+        clientsCount: "Clientes",
+        experienceYears: "Años de experiencia",
+        servicesTitle: "Nuestros servicios",
+        servicesSubtitle: "Servicio completo: selección, reserva, visados, seguros, transferencias, excursiones.",
+        service1Title: "Viajes individuales",
+        service1Desc: "Rutas adaptadas a tu estilo y presupuesto.",
+        service2Title: "Reservas de hoteles",
+        service2Desc: "Socios y resorts verificados.",
+        service3Title: "Vuelos y seguros",
+        service3Desc: "Vuelos óptimos + seguro de viaje.",
+        moreInfo: "Más",
+        toursTitle: "Tours populares",
+        toursSubtitle: "Elige tu tour soñado — desde escapadas urbanas hasta vacaciones de bienestar.",
+        tour1Title: "París romántico",
+        tour1Desc: "3 días / 2 noches • 2–4 personas",
+        tour2Title: "Maldivas — villas sobre el agua",
+        tour2Desc: "7 días / 6 noches • 2 personas",
+        tour3Title: "Dubái — cuentos orientales",
+        tour3Desc: "5 días / 4 noches • 2–6 personas",
+        addToCart: "Agregar",
+        added: "Agregado ✓",
+        reviewsTitle: "Reseñas de clientes",
+        blogTitle: "Nuestro blog",
+        blogSubtitle: "Consejos útiles, historias y noticias del mundo de los viajes",
+        blog1Title: "Top 10 destinos de verano en Europa",
+        blog1Desc: "Desde el Mediterráneo hasta los Alpes — una selección de imprescindibles.",
+        blog2Title: "Cómo empacar una maleta sin sobrecargar",
+        blog2Desc: "Lista de imprescindibles + trucos de organización.",
+        blog3Title: "Las mejores playas para una relajación perfecta",
+        blog3Desc: "Maldivas, Caribe y lugares secretos.",
+        readMore: "Leer más",
+        contactTitle: "Contáctanos",
+        contactSubtitle: "Escribe o llama — responderemos rápidamente y te ayudaremos con tu selección.",
+        address: "Dirección",
+        phone: "Teléfono",
+        email: "Correo electrónico",
+        openingHours: "Horario de apertura",
+        hours: "Lun–Vie: 09:00–18:00 • Sáb: 10:00–15:00",
+        yourName: "Tu nombre",
+        topic: "Tema",
+        selectTopic: "Seleccionar tema",
+        bookingTopic: "Reserva de tour",
+        infoTopic: "Información de tours",
+        cooperationTopic: "Cooperación",
+        otherTopic: "Otro",
+        message: "Mensaje",
+        sendMessage: "Enviar mensaje",
+        formSuccess: "¡Gracias! Te contactaremos en ",
+        pages: "Páginas",
+        contacts: "Contactos",
+        footerDesc: "Viajes exclusivos, retiros de bienestar y fines de semana urbanos. Base — Brno, Chequia.",
+        copyright: "© ",
+        emptyCart: "El carrito está vacío",
+        total: "TOTAL",
+        checkoutTitle: "Completar pedido",
+        cardPayment: "Pago con tarjeta",
+        cardName: "Nombre en la tarjeta",
+        cardNumber: "Número de tarjeta",
+        cardExpiry: "Vencimiento",
+        cardCvv: "CVV",
+        payButton: "Pagar",
+        cardError: "Error: verifica los datos de la tarjeta.",
+        paymentSuccess: "El pago en modo demo fue exitoso ✅. Te enviaremos una confirmación por correo electrónico.",
+        otherPayment: "Otros métodos",
+        paymentDesc: "Puedes pagar a través de PayPal o transferencia bancaria SEPA en EUR.",
+        paypalRequest: "Solicitar factura de PayPal",
+        invoiceRequest: "Escríbenos para emitir una factura con detalles.",
+        cryptoPayment: "USDT TRC20 (opcional)",
+        destination: "¿A dónde quieres ir?",
+        from: "Desde",
+        to: "Hasta",
+        people: "Personas",
+        budget: "Presupuesto (€)",
+        wishes: "Deseos",
+        chatMessage: "¡Hola! Quiero reservar un tour.",
+        contactInfo: "Contacto",
+        quickContacts: "Contactos rápidos"
+      },
+      fr: {
+        home: "Accueil",
+        services: "Services",
+        tours: "Circuits",
+        reviews: "Avis",
+        blog: "Blog",
+        contact: "Contact",
+        heroTitle: "Découvrez le monde avec nous",
+        heroSubtitle: "Voyages inoubliables, wellness et city-breaks. Service professionnel de la sélection au paiement.",
+        viewTours: "Voir les circuits",
+        contactUs: "Contactez-nous",
+        toursCount: "Circuits",
+        countriesCount: "Pays",
+        clientsCount: "Clients",
+        experienceYears: "Années d'expérience",
+        servicesTitle: "Nos services",
+        servicesSubtitle: "Service complet : sélection, réservation, visas, assurance, transferts, excursions.",
+        service1Title: "Voyages individuels",
+        service1Desc: "Itinéraires sur mesure selon votre style et votre budget.",
+        service2Title: "Réservations d'hôtels",
+        service2Desc: "Partenaires et resorts vérifiés.",
+        service3Title: "Vols et assurance",
+        service3Desc: "Vols optimaux + assurance voyage.",
+        moreInfo: "Plus",
+        toursTitle: "Circuits populaires",
+        toursSubtitle: "Choisissez votre circuit de rêve — des city-breaks aux vacances wellness.",
+        tour1Title: "Paris romantique",
+        tour1Desc: "3 jours / 2 nuits • 2–4 personnes",
+        tour2Title: "Maldives — villas sur l'eau",
+        tour2Desc: "7 jours / 6 nuits • 2 personnes",
+        tour3Title: "Dubaï — contes orientaux",
+        tour3Desc: "5 jours / 4 nuits • 2–6 personnes",
+        addToCart: "Ajouter",
+        added: "Ajouté ✓",
+        reviewsTitle: "Avis clients",
+        blogTitle: "Notre blog",
+        blogSubtitle: "Conseils utiles, histoires et actualités du monde du voyage",
+        blog1Title: "Top 10 des destinations d'été en Europe",
+        blog1Desc: "De la Méditerranée aux Alpes — une sélection d'incontournables.",
+        blog2Title: "Comment faire une valise sans surcharge",
+        blog2Desc: "Liste d'essentiels + astuces d'organisation.",
+        blog3Title: "Meilleures plages pour une relaxation parfaite",
+        blog3Desc: "Maldives, Caraïbes et endroits secrets.",
+        readMore: "Lire plus",
+        contactTitle: "Contactez-nous",
+        contactSubtitle: "Écrivez ou appelez — nous répondrons rapidement et vous aiderons dans votre choix.",
+        address: "Adresse",
+        phone: "Téléphone",
+        email: "E-mail",
+        openingHours: "Heures d'ouverture",
+        hours: "Lun–Ven: 09:00–18:00 • Sam: 10:00–15:00",
+        yourName: "Votre nom",
+        topic: "Sujet",
+        selectTopic: "Sélectionner un sujet",
+        bookingTopic: "Réservation de circuit",
+        infoTopic: "Informations sur les circuits",
+        cooperationTopic: "Coopération",
+        otherTopic: "Autre",
+        message: "Message",
+        sendMessage: "Envoyer le message",
+        formSuccess: "Merci! Nous vous contacterons à ",
+        pages: "Pages",
+        contacts: "Contacts",
+        footerDesc: "Voyages exclusifs, retraites wellness et week-ends en ville. Base — Brno, Tchéquie.",
+        copyright: "© ",
+        emptyCart: "Le panier est vide",
+        total: "TOTAL",
+        checkoutTitle: "Finaliser la commande",
+        cardPayment: "Paiement par carte",
+        cardName: "Nom sur la carte",
+        cardNumber: "Numéro de carte",
+        cardExpiry: "Date d'expiration",
+        cardCvv: "CVV",
+        payButton: "Payer",
+        cardError: "Erreur : vérifiez les détails de la carte.",
+        paymentSuccess: "Le paiement en mode démo a réussi ✅. Nous vous enverrons une confirmation par e-mail.",
+        otherPayment: "Autres méthodes",
+        paymentDesc: "Vous pouvez payer via PayPal ou virement bancaire SEPA en EUR.",
+        paypalRequest: "Demander une facture PayPal",
+        invoiceRequest: "Écrivez-nous pour émettre une facture avec détails.",
+        cryptoPayment: "USDT TRC20 (optionnel)",
+        destination: "Où voulez-vous aller?",
+        from: "De",
+        to: "À",
+        people: "Personnes",
+        budget: "Budget (€)",
+        wishes: "Souhaits",
+        chatMessage: "Bonjour! Je veux réserver un circuit.",
+        contactInfo: "Contact",
+        quickContacts: "Contacts rapides"
+      },
+      it: {
+        home: "Home",
+        services: "Servizi",
+        tours: "Tour",
+        reviews: "Recensioni",
+        blog: "Blog",
+        contact: "Contatto",
+        heroTitle: "Scopri il mondo con noi",
+        heroSubtitle: "Viaggi indimenticabili, wellness e city-break. Servizio professionale dalla selezione al pagamento.",
+        viewTours: "Vedi tour",
+        contactUs: "Contattaci",
+        toursCount: "Tour",
+        countriesCount: "Paesi",
+        clientsCount: "Clienti",
+        experienceYears: "Anni di esperienza",
+        servicesTitle: "I nostri servizi",
+        servicesSubtitle: "Servizio completo: selezione, prenotazione, visti, assicurazione, trasferimenti, escursioni.",
+        service1Title: "Viaggi individuali",
+        service1Desc: "Itinerari su misura per il tuo stile e budget.",
+        service2Title: "Prenotazioni hotel",
+        service2Desc: "Partner e resort verificati.",
+        service3Title: "Voli e assicurazione",
+        service3Desc: "Voli ottimali + assicurazione viaggio.",
+        moreInfo: "Più",
+        toursTitle: "Tour popolari",
+        toursSubtitle: "Scegli il tuo tour dei sogni — dai city-break alle vacanze wellness.",
+        tour1Title: "Parigi romantica",
+        tour1Desc: "3 giorni / 2 notti • 2–4 persone",
+        tour2Title: "Maldive — ville sull'acqua",
+        tour2Desc: "7 giorni / 6 notti • 2 persone",
+        tour3Title: "Dubai — favole orientali",
+        tour3Desc: "5 giorni / 4 notti • 2–6 persone",
+        addToCart: "Aggiungi",
+        added: "Aggiunto ✓",
+        reviewsTitle: "Recensioni dei clienti",
+        blogTitle: "Il nostro blog",
+        blogSubtitle: "Consigli utili, storie e notizie dal mondo dei viaggi",
+        blog1Title: "Top 10 destinazioni estive in Europa",
+        blog1Desc: "Dal Mediterraneo alle Alpi — una selezione di must-see.",
+        blog2Title: "Come fare una valigia senza sovraccarico",
+        blog2Desc: "Lista di must-have + trucchi di organizzazione.",
+        blog3Title: "Migliori spiagge per un relax perfetto",
+        blog3Desc: "Maldive, Caraibi e posti segreti.",
+        readMore: "Leggi di più",
+        contactTitle: "Contattaci",
+        contactSubtitle: "Scrivi o chiama — risponderemo rapidamente e ti aiuteremo con la tua selezione.",
+        address: "Indirizzo",
+        phone: "Telefono",
+        email: "Email",
+        openingHours: "Orari di apertura",
+        hours: "Lun–Ven: 09:00–18:00 • Sab: 10:00–15:00",
+        yourName: "Il tuo nome",
+        topic: "Argomento",
+        selectTopic: "Seleziona argomento",
+        bookingTopic: "Prenotazione tour",
+        infoTopic: "Informazioni tour",
+        cooperationTopic: "Cooperazione",
+        otherTopic: "Altro",
+        message: "Messaggio",
+        sendMessage: "Invia messaggio",
+        formSuccess: "Grazie! Ti contatteremo a ",
+        pages: "Pagine",
+        contacts: "Contatti",
+        footerDesc: "Viaggi esclusivi, ritiri wellness e weekend urbani. Base — Brno, Repubblica Ceca.",
+        copyright: "© ",
+        emptyCart: "Il carrello è vuoto",
+        total: "TOTALE",
+        checkoutTitle: "Completa ordine",
+        cardPayment: "Pagamento con carta",
+        cardName: "Nome sulla carta",
+        cardNumber: "Numero carta",
+        cardExpiry: "Scadenza",
+        cardCvv: "CVV",
+        payButton: "Paga",
+        cardError: "Errore: controlla i dati della carta.",
+        paymentSuccess: "Il pagamento in modalità demo ha avuto successo ✅. Ti invieremo una conferma via email.",
+        otherPayment: "Altri metodi",
+        paymentDesc: "Puoi pagare tramite PayPal o bonifico bancario SEPA in EUR.",
+        paypalRequest: "Richiedi fattura PayPal",
+        invoiceRequest: "Scrivici per emettere una fattura con dettagli.",
+        cryptoPayment: "USDT TRC20 (opzionale)",
+        destination: "Dove vuoi andare?",
+        from: "Da",
+        to: "A",
+        people: "Persone",
+        budget: "Budget (€)",
+        wishes: "Desideri",
+        chatMessage: "Ciao! Voglio prenotare un tour.",
+        contactInfo: "Contatto",
+        quickContacts: "Contatti rapidi"
+      },
+      pl: {
+        home: "Strona główna",
+        services: "Usługi",
+        tours: "Wycieczki",
+        reviews: "Recenzje",
+        blog: "Blog",
+        contact: "Kontakt",
+        heroTitle: "Odkryj świat z nami",
+        heroSubtitle: "Niezapomniane podróże, wellness i city-breaky. Profesjonalna obsługa od wyboru do płatności.",
+        viewTours: "Zobacz wycieczki",
+        contactUs: "Skontaktuj się z nami",
+        toursCount: "Wycieczki",
+        countriesCount: "Kraje",
+        clientsCount: "Klienci",
+        experienceYears: "Lat doświadczenia",
+        servicesTitle: "Nasze usługi",
+        servicesSubtitle: "Kompleksowa obsługa: wybór, rezerwacja, wizy, ubezpieczenie, transfery, wycieczki.",
+        service1Title: "Podróże indywidualne",
+        service1Desc: "Trasy dostosowane do Twojego stylu i budżetu.",
+        service2Title: "Rezerwacje hoteli",
+        service2Desc: "Zweryfikowani partnerzy i ośrodki.",
+        service3Title: "Loty i ubezpieczenie",
+        service3Desc: "Optymalne loty + ubezpieczenie podróży.",
+        moreInfo: "Więcej",
+        toursTitle: "Popularne wycieczki",
+        toursSubtitle: "Wybierz swoją wymarzoną wycieczkę — od city-breaku po wakacje wellness.",
+        tour1Title: "Romantyczny Paryż",
+        tour1Desc: "3 dni / 2 noce • 2–4 osoby",
+        tour2Title: "Malediwy — wille na wodzie",
+        tour2Desc: "7 dni / 6 nocy • 2 osoby",
+        tour3Title: "Dubaj — orientalne bajki",
+        tour3Desc: "5 dni / 4 noce • 2–6 osób",
+        addToCart: "Dodaj",
+        added: "Dodano ✓",
+        reviewsTitle: "Opinie klientów",
+        blogTitle: "Nasz blog",
+        blogSubtitle: "Przydatne wskazówki, historie i nowości ze świata podróży",
+        blog1Title: "Top 10 miejsc na lato w Europie",
+        blog1Desc: "Od Morza Śródziemnego po Alpy — wybór must-see.",
+        blog2Title: "Jak spakować walizkę bez przeciążenia",
+        blog2Desc: "Lista must-have + triki organizacyjne.",
+        blog3Title: "Najlepsze plaże na idealny relaks",
+        blog3Desc: "Malediwy, Karaiby i tajne miejsca.",
+        readMore: "Czytaj więcej",
+        contactTitle: "Skontaktuj się z nami",
+        contactSubtitle: "Pisz lub dzwoń — szybko odpowiemy i pomożemy w wyborze.",
+        address: "Adres",
+        phone: "Telefon",
+        email: "Email",
+        openingHours: "Godziny otwarcia",
+        hours: "Pn–Pt: 09:00–18:00 • So: 10:00–15:00",
+        yourName: "Twoje imię",
+        topic: "Temat",
+        selectTopic: "Wybierz temat",
+        bookingTopic: "Rezerwacja wycieczki",
+        infoTopic: "Informacje o wycieczkach",
+        cooperationTopic: "Współpraca",
+        otherTopic: "Inne",
+        message: "Wiadomość",
+        sendMessage: "Wyślij wiadomość",
+        formSuccess: "Dziękujemy! Skontaktujemy się z Tobą pod ",
+        pages: "Strony",
+        contacts: "Kontakty",
+        footerDesc: "Ekskluzywne podróże, wyjazdy wellness i miejskie weekendy. Baza — Brno, Czechy.",
+        copyright: "© ",
+        emptyCart: "Koszyk jest pusty",
+        total: "SUMA",
+        checkoutTitle: "Zakończ zamówienie",
+        cardPayment: "Płatność kartą",
+        cardName: "Imię na karcie",
+        cardNumber: "Numer karty",
+        cardExpiry: "Ważność",
+        cardCvv: "CVV",
+        payButton: "Zapłać",
+        cardError: "Błąd: sprawdź dane karty.",
+        paymentSuccess: "Płatność w trybie demo zakończona sukcesem ✅. Wyślemy Ci potwierdzenie e-mailem.",
+        otherPayment: "Inne metody",
+        paymentDesc: "Możesz zapłacić przez PayPal lub przelewem bankowym SEPA w EUR.",
+        paypalRequest: "Poproś o fakturę PayPal",
+        invoiceRequest: "Napisz do nas o wystawienie faktury z danymi.",
+        cryptoPayment: "USDT TRC20 (opcjonalnie)",
+        destination: "Dokąd chcesz jechać?",
+        from: "Od",
+        to: "Do",
+        people: "Osób",
+        budget: "Budżet (€)",
+        wishes: "Życzenia",
+        chatMessage: "Dzień dobry! Chcę zarezerwować wycieczkę.",
+        contactInfo: "Kontakt",
+        quickContacts: "Szybkie kontakty"
+      },
+      pt: {
+        home: "Início",
+        services: "Serviços",
+        tours: "Passeios",
+        reviews: "Avaliações",
+        blog: "Blog",
+        contact: "Contato",
+        heroTitle: "Descubra o mundo conosco",
+        heroSubtitle: "Viagens inesquecíveis, wellness e city-breaks. Serviço profissional da seleção ao pagamento.",
+        viewTours: "Ver passeios",
+        contactUs: "Entre em contato",
+        toursCount: "Passeios",
+        countriesCount: "Países",
+        clientsCount: "Clientes",
+        experienceYears: "Anos de experiência",
+        servicesTitle: "Nossos serviços",
+        servicesSubtitle: "Serviço completo: seleção, reserva, vistos, seguro, transferências, passeios.",
+        service1Title: "Viagens individuais",
+        service1Desc: "Rotas adaptadas ao seu estilo e orçamento.",
+        service2Title: "Reservas de hotéis",
+        service2Desc: "Parceiros e resorts verificados.",
+        service3Title: "Voos e seguro",
+        service3Desc: "Voos ótimos + seguro de viagem.",
+        moreInfo: "Mais",
+        toursTitle: "Passeios populares",
+        toursSubtitle: "Escolha seu passeio dos sonhos — de city-breaks a férias de wellness.",
+        tour1Title: "Paris romântico",
+        tour1Desc: "3 dias / 2 noites • 2–4 pessoas",
+        tour2Title: "Maldivas — vilas na água",
+        tour2Desc: "7 dias / 6 noites • 2 pessoas",
+        tour3Title: "Dubai — contos orientais",
+        tour3Desc: "5 dias / 4 noites • 2–6 pessoas",
+        addToCart: "Adicionar",
+        added: "Adicionado ✓",
+        reviewsTitle: "Avaliações de clientes",
+        blogTitle: "Nosso blog",
+        blogSubtitle: "Dicas úteis, histórias e notícias do mundo das viagens",
+        blog1Title: "Top 10 destinos de verão na Europa",
+        blog1Desc: "Do Mediterrâneo aos Alpes — uma seleção de must-see.",
+        blog2Title: "Como fazer uma mala sem excesso de bagagem",
+        blog2Desc: "Lista de must-have + truques de organização.",
+        blog3Title: "Melhores praias para relaxamento perfeito",
+        blog3Desc: "Maldivas, Caribe e lugares secretos.",
+        readMore: "Leia mais",
+        contactTitle: "Entre em contato",
+        contactSubtitle: "Escreva ou ligue — responderemos rapidamente e ajudaremos na sua seleção.",
+        address: "Endereço",
+        phone: "Telefone",
+        email: "E-mail",
+        openingHours: "Horário de funcionamento",
+        hours: "Seg–Sex: 09:00–18:00 • Sáb: 10:00–15:00",
+        yourName: "Seu nome",
+        topic: "Tópico",
+        selectTopic: "Selecionar tópico",
+        bookingTopic: "Reserva de passeio",
+        infoTopic: "Informações sobre passeios",
+        cooperationTopic: "Cooperação",
+        otherTopic: "Outro",
+        message: "Mensagem",
+        sendMessage: "Enviar mensagem",
+        formSuccess: "Obrigado! Entraremos em contato com você em ",
+        pages: "Páginas",
+        contacts: "Contatos",
+        footerDesc: "Viagens exclusivas, retiros de wellness e fins de semana urbanos. Base — Brno, República Tcheca.",
+        copyright: "© ",
+        emptyCart: "O carrinho está vazio",
+        total: "TOTAL",
+        checkoutTitle: "Finalizar pedido",
+        cardPayment: "Pagamento com cartão",
+        cardName: "Nome no cartão",
+        cardNumber: "Número do cartão",
+        cardExpiry: "Validade",
+        cardCvv: "CVV",
+        payButton: "Pagar",
+        cardError: "Erro: verifique os dados do cartão.",
+        paymentSuccess: "Pagamento no modo demo foi bem-sucedido ✅. Enviaremos uma confirmação por e-mail.",
+        otherPayment: "Outros métodos",
+        paymentDesc: "Você pode pagar via PayPal ou transferência bancária SEPA em EUR.",
+        paypalRequest: "Solicitar fatura PayPal",
+        invoiceRequest: "Escreva-nos para emitir uma fatura com detalhes.",
+        cryptoPayment: "USDT TRC20 (opcional)",
+        destination: "Para onde você quer ir?",
+        from: "De",
+        to: "Para",
+        people: "Pessoas",
+        budget: "Orçamento (€)",
+        wishes: "Desejos",
+        chatMessage: "Olá! Quero reservar um passeio.",
+        contactInfo: "Contato",
+        quickContacts: "Contatos rápidos"
+      },
+      ru: {
+        home: "Главная",
+        services: "Услуги",
+        tours: "Туры",
+        reviews: "Отзывы",
+        blog: "Блог",
+        contact: "Контакты",
+        heroTitle: "Откройте для себя мир с нами",
+        heroSubtitle: "Незабываемые путешествия, оздоровительные туры и городские туры. Профессиональный сервис от выбора до оплаты.",
+        viewTours: "Смотреть туры",
+        contactUs: "Свяжитесь с нами",
+        toursCount: "Туров",
+        countriesCount: "Стран",
+        clientsCount: "Клиентов",
+        experienceYears: "Лет опыта",
+        servicesTitle: "Наши услуги",
+        servicesSubtitle: "Полный сервис: выбор, бронирование, визы, страховка, трансферы, экскурсии.",
+        service1Title: "Индивидуальные путешествия",
+        service1Desc: "Маршруты, разработанные под ваш стиль и бюджет.",
+        service2Title: "Бронирование отелей",
+        service2Desc: "Проверенные партнеры и курорты.",
+        service3Title: "Авиабилеты и страховка",
+        service3Desc: "Оптимальные перелеты + страхование путешествий.",
+        moreInfo: "Подробнее",
+        toursTitle: "Популярные туры",
+        toursSubtitle: "Выберите тур вашей мечты — от городских туров до оздоровительного отдыха.",
+        tour1Title: "Романтический Париж",
+        tour1Desc: "3 дня / 2 ночи • 2–4 человека",
+        tour2Title: "Мальдивы — виллы на воде",
+        tour2Desc: "7 дней / 6 ночей • 2 человека",
+        tour3Title: "Дубай — восточные сказки",
+        tour3Desc: "5 дней / 4 ночи • 2–6 человек",
+        addToCart: "Добавить",
+        added: "Добавлено ✓",
+        reviewsTitle: "Отзывы клиентов",
+        blogTitle: "Наш блог",
+        blogSubtitle: "Полезные советы, истории и новости из мира путешествий",
+        blog1Title: "Топ-10 мест для лета в Европе",
+        blog1Desc: "От Средиземноморья до Альп — выбор обязательных к посещению мест.",
+        blog2Title: "Как упаковать чемодан без перегруза",
+        blog2Desc: "Список обязательных вещей + организационные лайфхаки.",
+        blog3Title: "Лучшие пляжи для идеального отдыха",
+        blog3Desc: "Мальдивы, Карибы и секретные места.",
+        readMore: "Читать далее",
+        contactTitle: "Свяжитесь с нами",
+        contactSubtitle: "Пишите или звоните — мы быстро ответим и поможем с выбором.",
+        address: "Адрес",
+        phone: "Телефон",
+        email: "Email",
+        openingHours: "Часы работы",
+        hours: "Пн–Пт: 09:00–18:00 • Сб: 10:00–15:00",
+        yourName: "Ваше имя",
+        topic: "Тема",
+        selectTopic: "Выберите тему",
+        bookingTopic: "Бронирование тура",
+        infoTopic: "Информация о турах",
+        cooperationTopic: "Сотрудничество",
+        otherTopic: "Другое",
+        message: "Сообщение",
+        sendMessage: "Отправить сообщение",
+        formSuccess: "Спасибо! Мы свяжемся с вами по ",
+        pages: "Страницы",
+        contacts: "Контакты",
+        footerDesc: "Эксклюзивные путешествия, оздоровительные туры и городские выходные. База — Брно, Чехия.",
+        copyright: "© ",
+        emptyCart: "Корзина пуста",
+        total: "ИТОГО",
+        checkoutTitle: "Оформить заказ",
+        cardPayment: "Оплата картой",
+        cardName: "Имя на карте",
+        cardNumber: "Номер карты",
+        cardExpiry: "Срок действия",
+        cardCvv: "CVV",
+        payButton: "Оплатить",
+        cardError: "Ошибка: проверьте данные карты.",
+        paymentSuccess: "Оплата в демо-режиме прошла успешно ✅. Мы отправим вам подтверждение по электронной почте.",
+        otherPayment: "Другие способы",
+        paymentDesc: "Вы можете оплатить через PayPal или банковский перевод SEPA в EUR.",
+        paypalRequest: "Запросить счет PayPal",
+        invoiceRequest: "Напишите нам для выставления счета с реквизитами.",
+        cryptoPayment: "USDT TRC20 (по желанию)",
+        destination: "Куда вы хотите поехать?",
+        from: "С",
+        to: "По",
+        people: "Человек",
+        budget: "Бюджет (€)",
+        wishes: "Пожелания",
+        chatMessage: "Здравствуйте! Я хочу забронировать тур.",
+        contactInfo: "Контакт",
+        quickContacts: "Быстрые контакты"
+      },
+      uk: {
+        home: "Головна",
+        services: "Послуги",
+        tours: "Тури",
+        reviews: "Відгуки",
+        blog: "Блог",
+        contact: "Контакти",
+        heroTitle: "Відкрийте світ з нами",
+        heroSubtitle: "Незабутні подорожі, оздоровчі тури та міські тури. Професійний сервіс від вибору до оплати.",
+        viewTours: "Переглянути тури",
+        contactUs: "Зв'яжіться з нами",
+        toursCount: "Турів",
+        countriesCount: "Країн",
+        clientsCount: "Клієнтів",
+        experienceYears: "Років досвіду",
+        servicesTitle: "Наші послуги",
+        servicesSubtitle: "Повний сервіс: вибір, бронювання, візи, страхування, трансфери, екскурсії.",
+        service1Title: "Індивідуальні подорожі",
+        service1Desc: "Маршрути, розроблені під ваш стиль та бюджет.",
+        service2Title: "Бронювання готелів",
+        service2Desc: "Перевірені партнери та курорти.",
+        service3Title: "Авіаквитки та страхування",
+        service3Desc: "Оптимальні перельоти + страхування подорожей.",
+        moreInfo: "Більше",
+        toursTitle: "Популярні тури",
+        toursSubtitle: "Оберіть тур вашої мрії — від міських турів до оздоровчого відпочинку.",
+        tour1Title: "Романтичний Париж",
+        tour1Desc: "3 дні / 2 ночі • 2–4 особи",
+        tour2Title: "Мальдіви — вілли на воді",
+        tour2Desc: "7 днів / 6 ночей • 2 особи",
+        tour3Title: "Дубай — східні казки",
+        tour3Desc: "5 днів / 4 ночі • 2–6 осіб",
+        addToCart: "Додати",
+        added: "Додано ✓",
+        reviewsTitle: "Відгуки клієнтів",
+        blogTitle: "Наш блог",
+        blogSubtitle: "Корисні поради, історії та новини зі світу подорожей",
+        blog1Title: "Топ-10 місць для літа в Європі",
+        blog1Desc: "Від Середземномор'я до Альп — вибір обов'язкових до відвідування місць.",
+        blog2Title: "Як упакувати валізу без перевантаження",
+        blog2Desc: "Список обов'язкових речей + організаційні лайфхаки.",
+        blog3Title: "Найкращі пляжі для ідеального відпочинку",
+        blog3Desc: "Мальдіви, Кариби та секретні місця.",
+        readMore: "Читати далі",
+        contactTitle: "Зв'яжіться з нами",
+        contactSubtitle: "Пишіть або телефонуйте — ми швидко відповімо та допоможемо з вибором.",
+        address: "Адреса",
+        phone: "Телефон",
+        email: "Email",
+        openingHours: "Години роботи",
+        hours: "Пн–Пт: 09:00–18:00 • Сб: 10:00–15:00",
+        yourName: "Ваше ім'я",
+        topic: "Тема",
+        selectTopic: "Виберіть тему",
+        bookingTopic: "Бронювання туру",
+        infoTopic: "Інформація про тури",
+        cooperationTopic: "Співпраця",
+        otherTopic: "Інше",
+        message: "Повідомлення",
+        sendMessage: "Надіслати повідомлення",
+        formSuccess: "Дякуємо! Ми зв'яжемося з вами за ",
+        pages: "Сторінки",
+        contacts: "Контакти",
+        footerDesc: "Ексклюзивні подорожі, оздоровчі тури та міські вихідні. База — Брно, Чехія.",
+        copyright: "© ",
+        emptyCart: "Кошик порожній",
+        total: "РАЗОМ",
+        checkoutTitle: "Оформити замовлення",
+        cardPayment: "Оплата карткою",
+        cardName: "Ім'я на картці",
+        cardNumber: "Номер картки",
+        cardExpiry: "Термін дії",
+        cardCvv: "CVV",
+        payButton: "Оплатити",
+        cardError: "Помилка: перевірте дані картки.",
+        paymentSuccess: "Оплата в демо-режимі пройшла успішно ✅. Ми надішлемо вам підтвердження електронною поштою.",
+        otherPayment: "Інші способи",
+        paymentDesc: "Ви можете оплатити через PayPal або банківський переказ SEPA в EUR.",
+        paypalRequest: "Запросити рахунок PayPal",
+        invoiceRequest: "Напишіть нам для виставлення рахунку з реквізитами.",
+        cryptoPayment: "USDT TRC20 (за бажанням)",
+        destination: "Куди ви хочете поїхати?",
+        from: "З",
+        to: "По",
+        people: "Осіб",
+        budget: "Бюджет (€)",
+        wishes: "Побажання",
+        chatMessage: "Доброго дня! Я хочу забронювати тур.",
+        contactInfo: "Контакт",
+        quickContacts: "Швидкі контакти"
+      },
+      zh: {
+        home: "首页",
+        services: "服务",
+        tours: "旅游",
+        reviews: "评论",
+        blog: "博客",
+        contact: "联系我们",
+        heroTitle: "与我们一起探索世界",
+        heroSubtitle: "难忘的旅程、健康之旅和城市短途旅行。从选择到付款的专业服务。",
+        viewTours: "查看旅游",
+        contactUs: "联系我们",
+        toursCount: "旅游",
+        countriesCount: "国家",
+        clientsCount: "客户",
+        experienceYears: "年经验",
+        servicesTitle: "我们的服务",
+        servicesSubtitle: "全套服务：选择、预订、签证、保险、接送、观光。",
+        service1Title: "个人旅行",
+        service1Desc: "根据您的风格和预算定制的路线。",
+        service2Title: "酒店预订",
+        service2Desc: "经过验证的合作伙伴和度假村。",
+        service3Title: "航班和保险",
+        service3Desc: "最佳航班 + 旅行保险。",
+        moreInfo: "更多信息",
+        toursTitle: "热门旅游",
+        toursSubtitle: "选择您梦想的旅游 — 从城市短途旅行到健康假期。",
+        tour1Title: "浪漫巴黎",
+        tour1Desc: "3天 / 2晚 • 2–4人",
+        tour2Title: "马尔代夫 — 水上别墅",
+        tour2Desc: "7天 / 6晚 • 2人",
+        tour3Title: "迪拜 — 东方童话",
+        tour3Desc: "5天 / 4晚 • 2–6人",
+        addToCart: "添加",
+        added: "已添加 ✓",
+        reviewsTitle: "客户评论",
+        blogTitle: "我们的博客",
+        blogSubtitle: "旅行世界的有用提示、故事和新闻",
+        blog1Title: "欧洲夏季十大目的地",
+        blog1Desc: "从地中海到阿尔卑斯山 — 必游之地选择。",
+        blog2Title: "如何打包行李而不超载",
+        blog2Desc: "必备清单 + 组织技巧。",
+        blog3Title: "完美放松的最佳海滩",
+        blog3Desc: "马尔代夫、加勒比海和秘密地点。",
+        readMore: "阅读更多",
+        contactTitle: "联系我们",
+        contactSubtitle: "写信或打电话 — 我们会快速回复并帮助您选择。",
+        address: "地址",
+        phone: "电话",
+        email: "电子邮件",
+        openingHours: "营业时间",
+        hours: "周一至周五: 09:00–18:00 • 周六: 10:00–15:00",
+        yourName: "您的姓名",
+        topic: "主题",
+        selectTopic: "选择主题",
+        bookingTopic: "旅游预订",
+        infoTopic: "旅游信息",
+        cooperationTopic: "合作",
+        otherTopic: "其他",
+        message: "留言",
+        sendMessage: "发送消息",
+        formSuccess: "谢谢！我们将通过 ",
+        pages: "页面",
+        contacts: "联系方式",
+        footerDesc: "独家旅行、健康静修和城市周末。基地 — 捷克布尔诺。",
+        copyright: "© ",
+        emptyCart: "购物车是空的",
+        total: "总计",
+        checkoutTitle: "完成订单",
+        cardPayment: "卡支付",
+        cardName: "卡上姓名",
+        cardNumber: "卡号",
+        cardExpiry: "有效期",
+        cardCvv: "CVV",
+        payButton: "支付",
+        cardError: "错误：请检查卡详细信息。",
+        paymentSuccess: "演示模式支付成功 ✅。我们将通过电子邮件向您发送确认。",
+        otherPayment: "其他方式",
+        paymentDesc: "您可以通过PayPal或SEPA银行转账以欧元支付。",
+        paypalRequest: "请求PayPal发票",
+        invoiceRequest: "写信给我们以获取包含详细信息的发票。",
+        cryptoPayment: "USDT TRC20（可选）",
+        destination: "您想去哪里？",
+        from: "从",
+        to: "到",
+        people: "人数",
+        budget: "预算 (€)",
+        wishes: "愿望",
+        chatMessage: "你好！我想预订旅游。",
+        contactInfo: "联系方式",
+        quickContacts: "快速联系方式"
+      },
+      ja: {
+        home: "ホーム",
+        services: "サービス",
+        tours: "ツアー",
+        reviews: "レビュー",
+        blog: "ブログ",
+        contact: "お問い合わせ",
+        heroTitle: "私たちと世界を発見",
+        heroSubtitle: "忘れられない旅行、ウェルネスとシティブレイク。選択から支払いまでのプロフェッショナルサービス。",
+        viewTours: "ツアーを見る",
+        contactUs: "お問い合わせ",
+        toursCount: "ツアー",
+        countriesCount: "国",
+        clientsCount: "顧客",
+        experienceYears: "年の経験",
+        servicesTitle: "私たちのサービス",
+        servicesSubtitle: "完全なサービス：選択、予約、ビザ、保険、送迎、観光。",
+        service1Title: "個人旅行",
+        service1Desc: "あなたのスタイルと予算に合わせたルート。",
+        service2Title: "ホテル予約",
+        service2Desc: "検証済みのパートナーとリゾート。",
+        service3Title: "フライトと保険",
+        service3Desc: "最適なフライト + 旅行保険。",
+        moreInfo: "詳細",
+        toursTitle: "人気のツアー",
+        toursSubtitle: "夢のツアーを選択 — シティブレイクからウェルネス休暇まで。",
+        tour1Title: "ロマンチックなパリ",
+        tour1Desc: "3日 / 2泊 • 2–4人",
+        tour2Title: "モルディブ — ウォーターヴィラ",
+        tour2Desc: "7日 / 6泊 • 2人",
+        tour3Title: "ドバイ — 東洋の物語",
+        tour3Desc: "5日 / 4泊 • 2–6人",
+        addToCart: "追加",
+        added: "追加済み ✓",
+        reviewsTitle: "顧客レビュー",
+        blogTitle: "私たちのブログ",
+        blogSubtitle: "旅行の世界からの役立つヒント、ストーリー、ニュース",
+        blog1Title: "ヨーロッパの夏のトップ10 destinations",
+        blog1Desc: "地中海からアルプスまで — 必見の選択。",
+        blog2Title: "過負荷なしでスーツケースを詰める方法",
+        blog2Desc: "必須リスト + 組織のトリック。",
+        blog3Title: "完璧なリラクゼーションのための最高のビーチ",
+        blog3Desc: "モルディブ、カリブ、秘密の場所。",
+        readMore: "もっと読む",
+        contactTitle: "お問い合わせ",
+        contactSubtitle: "書くか電話する — 私たちは迅速に返信し、選択を支援します。",
+        address: "住所",
+        phone: "電話",
+        email: "メール",
+        openingHours: "営業時間",
+        hours: "月–金: 09:00–18:00 • 土: 10:00–15:00",
+        yourName: "お名前",
+        topic: "トピック",
+        selectTopic: "トピックを選択",
+        bookingTopic: "ツアー予約",
+        infoTopic: "ツアー情報",
+        cooperationTopic: "協力",
+        otherTopic: "その他",
+        message: "メッセージ",
+        sendMessage: "メッセージを送信",
+        formSuccess: "ありがとうございます！次の連絡先にお返事いたします ",
+        pages: "ページ",
+        contacts: "連絡先",
+        footerDesc: "エクスクルーシブな旅行、ウェルネスリトリートと都市の週末。拠点 — チェコ、ブルノ。",
+        copyright: "© ",
+        emptyCart: "カートは空です",
+        total: "合計",
+        checkoutTitle: "注文を完了",
+        cardPayment: "カード支払い",
+        cardName: "カード名義",
+        cardNumber: "カード番号",
+        cardExpiry: "有効期限",
+        cardCvv: "CVV",
+        payButton: "支払う",
+        cardError: "エラー：カードの詳細を確認してください。",
+        paymentSuccess: "デモモードでの支払いが成功しました ✅。メールで確認をお送りします。",
+        otherPayment: "その他の方法",
+        paymentDesc: "PayPalまたはSEPA銀行送金でEURで支払うことができます。",
+        paypalRequest: "PayPal請求書をリクエスト",
+        invoiceRequest: "詳細を含む請求書の発行についてはお問い合わせください。",
+        cryptoPayment: "USDT TRC20（オプション）",
+        destination: "どこに行きたいですか？",
+        from: "から",
+        to: "まで",
+        people: "人数",
+        budget: "予算 (€)",
+        wishes: "願い",
+        chatMessage: "こんにちは！ツアーを予約したいです。",
+        contactInfo: "連絡先",
+        quickContacts: "クイックコンタクト"
+      },
+      ko: {
+        home: "홈",
+        services: "서비스",
+        tours: "투어",
+        reviews: "리뷰",
+        blog: "블로그",
+        contact: "연락처",
+        heroTitle: "저희와 함께 세계를 발견하세요",
+        heroSubtitle: "잊지 못할 여행, 웰니스 및 시티 브레이크. 선택부터 지불까지 전문 서비스.",
+        viewTours: "투어 보기",
+        contactUs: "문의하기",
+        toursCount: "투어",
+        countriesCount: "국가",
+        clientsCount: "고객",
+        experienceYears: "년 경험",
+        servicesTitle: "저희 서비스",
+        servicesSubtitle: "완전한 서비스: 선택, 예약, 비자, 보험, 이동, 관광.",
+        service1Title: "개인 여행",
+        service1Desc: "귀하의 스타일과 예산에 맞춘 경로.",
+        service2Title: "호텔 예약",
+        service2Desc: "검증된 파트너 및 리조트.",
+        service3Title: "항공권 및 보험",
+        service3Desc: "최적의 항공편 + 여행 보험.",
+        moreInfo: "더보기",
+        toursTitle: "인기 투어",
+        toursSubtitle: "꿈의 투어를 선택하세요 — 시티 브레이크부터 웰니스 휴가까지.",
+        tour1Title: "낭만적인 파리",
+        tour1Desc: "3일 / 2박 • 2–4인",
+        tour2Title: "몰디브 — 워터 빌라",
+        tour2Desc: "7일 / 6박 • 2인",
+        tour3Title: "두바이 — 동화적인 이야기",
+        tour3Desc: "5일 / 4박 • 2–6인",
+        addToCart: "추가",
+        added: "추가됨 ✓",
+        reviewsTitle: "고객 리뷰",
+        blogTitle: "저희 블로그",
+        blogSubtitle: "여행 세계의 유용한 팁, 이야기 및 뉴스",
+        blog1Title: "유럽 여름 최고의 10곳",
+        blog1Desc: "지중해에서 알프스까지 — 꼭 봐야 할 장소 선택.",
+        blog2Title: "과부하 없이 여행 가방을 꾸리는 방법",
+        blog2Desc: "필수품 목록 + 조직 트릭.",
+        blog3Title: "완벽한 휴식을 위한 최고의 해변",
+        blog3Desc: "몰디브, 카리브해 및 비밀 장소.",
+        readMore: "더 읽기",
+        contactTitle: "문의하기",
+        contactSubtitle: "글을 쓰거나 전화하세요 — 빠르게 응답하고 선택을 도와드립니다.",
+        address: "주소",
+        phone: "전화",
+        email: "이메일",
+        openingHours: "영업 시간",
+        hours: "월–금: 09:00–18:00 • 토: 10:00–15:00",
+        yourName: "이름",
+        topic: "주제",
+        selectTopic: "주제 선택",
+        bookingTopic: "투어 예약",
+        infoTopic: "투어 정보",
+        cooperationTopic: "협력",
+        otherTopic: "기타",
+        message: "메시지",
+        sendMessage: "메시지 보내기",
+        formSuccess: "감사합니다! 다음 연락처로 연락드리겠습니다 ",
+        pages: "페이지",
+        contacts: "연락처",
+        footerDesc: "독점적인 여행, 웰니스 리트리트 및 도시 주말. 기지 — 체코, 브르노.",
+        copyright: "© ",
+        emptyCart: "카트가 비어 있습니다",
+        total: "총계",
+        checkoutTitle: "주문 완료",
+        cardPayment: "카드 결제",
+        cardName: "카드 소유자 이름",
+        cardNumber: "카드 번호",
+        cardExpiry: "유효 기간",
+        cardCvv: "CVV",
+        payButton: "결제",
+        cardError: "오류: 카드 세부 정보를 확인하세요.",
+        paymentSuccess: "데모 모드에서 결제가 성공적으로 완료되었습니다 ✅. 이메일로 확인서를 보내드리겠습니다.",
+        otherPayment: "기타 방법",
+        paymentDesc: "PayPal 또는 SEPA 은행 송금으로 EUR로 결제할 수 있습니다.",
+        paypalRequest: "PayPal 인보이스 요청",
+        invoiceRequest: "세부 정보가 포함된 인보이스 발행을 위해 문의하세요.",
+        cryptoPayment: "USDT TRC20 (선택 사항)",
+        destination: "어디로 가고 싶으신가요?",
+        from: "부터",
+        to: "까지",
+        people: "인원",
+        budget: "예산 (€)",
+        wishes: "희망 사항",
+        chatMessage: "안녕하세요! 투어를 예약하고 싶습니다.",
+        contactInfo: "연락처",
+        quickContacts: "빠른 연락처"
+      },
+      ar: {
+        home: "الرئيسية",
+        services: "الخدمات",
+        tours: "الجولات",
+        reviews: "التقييمات",
+        blog: "المدونة",
+        contact: "اتصل بنا",
+        heroTitle: "اكتشف العالم معنا",
+        heroSubtitle: "رحلات لا تُنسى، والعافية ورحلات المدن. خدمة احترافية من الاختيار إلى الدفع.",
+        viewTours: "عرض الجولات",
+        contactUs: "اتصل بنا",
+        toursCount: "جولات",
+        countriesCount: "دول",
+        clientsCount: "عملاء",
+        experienceYears: "سنوات الخبرة",
+        servicesTitle: "خدماتنا",
+        servicesSubtitle: "خدمة شاملة: الاختيار، الحجز، التأشيرات، التأمين، النقل، الجولات.",
+        service1Title: "رحلات فردية",
+        service1Desc: "مسارات مصممة حسب أسلوبك وميزانيتك.",
+        service2Title: "حجز الفنادق",
+        service2Desc: "شركاء ومنتجعات موثوقة.",
+        service3Title: "الرحلات والتأمين",
+        service3Desc: "رحلات مثالية + تأمين السفر.",
+        moreInfo: "المزيد",
+        toursTitle: "الجولات الشعبية",
+        toursSubtitle: "اختر جولة أحلامك — من رحلات المدن إلى إجازات العافية.",
+        tour1Title: "باريس الرومانسية",
+        tour1Desc: "3 أيام / ليلتان • 2–4 أشخاص",
+        tour2Title: "المالديف — فيلات على الماء",
+        tour2Desc: "7 أيام / 6 ليالٍ • شخصان",
+        tour3Title: "دبي — حكايات شرقية",
+        tour3Desc: "5 أيام / 4 ليالٍ • 2–6 أشخاص",
+        addToCart: "إضافة",
+        added: "تمت الإضافة ✓",
+        reviewsTitle: "تقييمات العملاء",
+        blogTitle: "مدونتنا",
+        blogSubtitle: "نصائح مفيدة وقصص وأخبار من عالم السفر",
+        blog1Title: "أفضل 10 وجهات صيفية في أوروبا",
+        blog1Desc: "من البحر المتوسط إلى الألب — اختيار الأماكن التي يجب زيارتها.",
+        blog2Title: "كيفية حقيبة السفر بدون زيادة الحمولة",
+        blog2Desc: "قائمة الضروريات + حيل التنظيم.",
+        blog3Title: "أفضل الشواطئ للاسترخاء المثالي",
+        blog3Desc: "المالديف، الكاريبي والأماكن السرية.",
+        readMore: "قراءة المزيد",
+        contactTitle: "اتصل بنا",
+        contactSubtitle: "اكتب أو اتصل — سنتصل بك بسرعة ونساعدك في اختيارك.",
+        address: "العنوان",
+        phone: "الهاتف",
+        email: "البريد الإلكتروني",
+        openingHours: "ساعات العمل",
+        hours: "الإثنين–الجمعة: 09:00–18:00 • السبت: 10:00–15:00",
+        yourName: "اسمك",
+        topic: "الموضوع",
+        selectTopic: "اختر موضوعًا",
+        bookingTopic: "حجز الجولة",
+        infoTopic: "معلومات الجولات",
+        cooperationTopic: "التعاون",
+        otherTopic: "أخرى",
+        message: "الرسالة",
+        sendMessage: "إرسال الرسالة",
+        formSuccess: "شكراً! سنتصل بك على ",
+        pages: "الصفحات",
+        contacts: "جهات الاتصال",
+        footerDesc: "رحلات حصرية، عافية وعطلات نهاية الأسبوع في المدن. القاعدة — برنو، التشيك.",
+        copyright: "© ",
+        emptyCart: "السلة فارغة",
+        total: "المجموع",
+        checkoutTitle: "إتمام الطلب",
+        cardPayment: "الدفع بالبطاقة",
+        cardName: "الاسم على البطاقة",
+        cardNumber: "رقم البطاقة",
+        cardExpiry: "تاريخ الانتهاء",
+        cardCvv: "CVV",
+        payButton: "دفع",
+        cardError: "خطأ: تحقق من تفاصيل البطاقة.",
+        paymentSuccess: "تم الدفع في وضع العرض التوضيحي بنجاح ✅. سنرسل لك تأكيدًا عبر البريد الإلكتروني.",
+        otherPayment: "طرق أخرى",
+        paymentDesc: "يمكنك الدفع عبر PayPal أو التحويل البنكي SEPA بعملة اليورو.",
+        paypalRequest: "طلب فاتورة PayPal",
+        invoiceRequest: "اكتب لنا لإصدار فاتورة بالتفاصيل.",
+        cryptoPayment: "USDT TRC20 (اختياري)",
+        destination: "أين تريد الذهاب؟",
+        from: "من",
+        to: "إلى",
+        people: "أشخاص",
+        budget: "الميزانية (€)",
+        wishes: "الأمنيات",
+        chatMessage: "مرحباً! أريد حجز جولة.",
+        contactInfo: "معلومات الاتصال",
+        quickContacts: "جهات الاتصال السريعة"
+      },
+      hi: {
+        home: "होम",
+        services: "सेवाएं",
+        tours: "टूर",
+        reviews: "समीक्षाएं",
+        blog: "ब्लॉग",
+        contact: "संपर्क करें",
+        heroTitle: "हमारे साथ दुनिया की खोज करें",
+        heroSubtitle: "अविस्मरणीय यात्राएं, वेलनेस और सिटी-ब्रेक। चयन से भुगतान तक पेशेवर सेवा।",
+        viewTours: "टूर देखें",
+        contactUs: "संपर्क करें",
+        toursCount: "टूर",
+        countriesCount: "देश",
+        clientsCount: "ग्राहक",
+        experienceYears: "वर्ष का अनुभव",
+        servicesTitle: "हमारी सेवाएं",
+        servicesSubtitle: "पूरी सेवा: चयन, बुकिंग, वीज़ा, बीमा, ट्रांसफर, एक्सकर्शन।",
+        service1Title: "व्यक्तिगत यात्राएं",
+        service1Desc: "आपकी शैली और बजट के अनुसार मार्ग।",
+        service2Title: "होटल बुकिंग",
+        service2Desc: "सत्यापित भागीदार और रिसॉर्ट।",
+        service3Title: "फ्लाइट और बीमा",
+        service3Desc: "इष्टतम फ्लाइट + यात्रा बीमा।",
+        moreInfo: "अधिक जानकारी",
+        toursTitle: "लोकप्रिय टूर",
+        toursSubtitle: "अपने सपनों का टूर चुनें — सिटी-ब्रेक से लेकर वेलनेस छुट्टियों तक।",
+        tour1Title: "रोमांटिक पेरिस",
+        tour1Desc: "3 दिन / 2 रातें • 2–4 लोग",
+        tour2Title: "मालदीव — वाटर विला",
+        tour2Desc: "7 दिन / 6 रातें • 2 लोग",
+        tour3Title: "दुबई — ओरिएंटल कहानियां",
+        tour3Desc: "5 दिन / 4 रातें • 2–6 लोग",
+        addToCart: "जोड़ें",
+        added: "जोड़ा गया ✓",
+        reviewsTitle: "ग्राहक समीक्षाएं",
+        blogTitle: "हमारा ब्लॉग",
+        blogSubtitle: "यात्रा की दुनिया से उपयोगी सुझाव, कहानियां और खबरें",
+        blog1Title: "यूरोप में गर्मी के लिए टॉप 10 जगहें",
+        blog1Desc: "भूमध्य सागर से लेकर अल्प्स तक — मस्ट-सी का चयन।",
+        blog2Title: "बिना ओवरलोड के सूटकेस कैसे पैक करें",
+        blog2Desc: "मस्ट-हैव लिस्ट + ऑर्गनाइज़ेशनल ट्रिक्स।",
+        blog3Title: "परफेक्ट रिलैक्सेशन के लिए बेस्ट बीच",
+        blog3Desc: "मालदीव, कैरेबियन और सीक्रेट स्पॉट।",
+        readMore: "और पढ़ें",
+        contactTitle: "हमसे संपर्क करें",
+        contactSubtitle: "लिखें या कॉल करें — हम तुरंत जवाब देंगे और आपके चयन में मदद करेंगे।",
+        address: "पता",
+        phone: "फोन",
+        email: "ईमेल",
+        openingHours: "खुलने का समय",
+        hours: "सोम–शुक्र: 09:00–18:00 • शनि: 10:00–15:00",
+        yourName: "आपका नाम",
+        topic: "विषय",
+        selectTopic: "विषय चुनें",
+        bookingTopic: "टूर बुकिंग",
+        infoTopic: "टूर की जानकारी",
+        cooperationTopic: "सहयोग",
+        otherTopic: "अन्य",
+        message: "संदेश",
+        sendMessage: "संदेश भेजें",
+        formSuccess: "धन्यवाद! हम आपसे संपर्क करेंगे ",
+        pages: "पेज",
+        contacts: "संपर्क",
+        footerDesc: "एक्सक्लूसिव यात्राएं, वेलनेस रिट्रीट और शहरी सप्ताहांत। आधार — ब्रनो, चेकिया।",
+        copyright: "© ",
+        emptyCart: "कार्ट खाली है",
+        total: "कुल",
+        checkoutTitle: "ऑर्डर पूरा करें",
+        cardPayment: "कार्ड भुगतान",
+        cardName: "कार्ड पर नाम",
+        cardNumber: "कार्ड नंबर",
+        cardExpiry: "समाप्ति",
+        cardCvv: "CVV",
+        payButton: "भुगतान करें",
+        cardError: "त्रुटि: कार्ड विवरण जांचें।",
+        paymentSuccess: "डेमो मोड में भुगतान सफल रहा ✅. हम आपको ईमेल द्वारा पुष्टि भेजेंगे।",
+        otherPayment: "अन्य तरीके",
+        paymentDesc: "आप PayPal या SEPA बैंक ट्रांसफर द्वारा EUR में भुगतान कर सकते हैं।",
+        paypalRequest: "PayPal इनवॉइस अनुरोध करें",
+        invoiceRequest: "विवरण के साथ इनवॉइस जारी करने के लिए हमें लिखें।",
+        cryptoPayment: "USDT TRC20 (वैकल्पिक)",
+        destination: "आप कहाँ जाना चाहते हैं?",
+        from: "से",
+        to: "तक",
+        people: "लोग",
+        budget: "बजट (€)",
+        wishes: "इच्छाएं",
+        chatMessage: "नमस्ते! मैं एक टूर बुक करना चाहता हूँ।",
+        contactInfo: "संपर्क जानकारी",
+        quickContacts: "त्वरित संपर्क"
+      }
+    };
+    
+    let currentLang = 'cz';
+    
+    // Language selector functionality
+    const languageSelect = document.getElementById('languageSelect');
+    const langButtons = document.querySelectorAll('.lang-btn');
+    
+    languageSelect.addEventListener('change', (e) => {
+      const selectedLang = e.target.value;
+      changeLanguage(selectedLang);
+      
+      // Update active language button
+      langButtons.forEach(btn => {
+        if (btn.dataset.lang === selectedLang) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+    });
+    
+    // Language button functionality
+    langButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const selectedLang = btn.dataset.lang;
+        changeLanguage(selectedLang);
+        
+        // Update language selector
+        languageSelect.value = selectedLang;
+        
+        // Update active button
+        langButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+    
+    function changeLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      
+      // Update all elements with data-translate attribute
+      document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+      
+      // Update form placeholders
+      const placeholders = {
+        name: translations[lang].yourName || "Vaše jméno",
+        email: "your@email.com",
+        phone: "+420 731 473 473",
+        msg: translations[lang].message || "Napište váš dotaz..."
+      };
+      
+      document.getElementById('name').placeholder = placeholders.name;
+      document.getElementById('email').placeholder = placeholders.email;
+      document.getElementById('phone').placeholder = placeholders.phone;
+      document.getElementById('msg').placeholder = placeholders.msg;
+      
+      // Update chatbot placeholders
+      const chatPlaceholders = {
+        bPlace: translations[lang].destination || "Kam chcete jet?",
+        bNotes: translations[lang].wishes || "Hotel 4*, wellness, výlety..."
+      };
+      
+      document.getElementById('bPlace').placeholder = chatPlaceholders.bPlace;
+      document.getElementById('bNotes').placeholder = chatPlaceholders.bNotes;
+      
+      // Update form options
+      const formOptions = {
+        topic: [
+          { value: "", text: translations[lang].selectTopic || "Vyberte téma" },
+          { value: "booking", text: translations[lang].bookingTopic || "Rezervace zájezdu" },
+          { value: "info", text: translations[lang].infoTopic || "Informace o zájezdech" },
+          { value: "cooperation", text: translations[lang].cooperationTopic || "Spolupráce" },
+          { value: "other", text: translations[lang].otherTopic || "Jiné" }
+        ]
+      };
+      
+      const topicSelect = document.getElementById('topic');
+      topicSelect.innerHTML = '';
+      formOptions.topic.forEach(option => {
+        const opt = document.createElement('option');
+        opt.value = option.value;
+        opt.textContent = option.text;
+        topicSelect.appendChild(opt);
+      });
+      
+      // Update cart if visible
+      if (checkoutModal.classList.contains('show')) {
+        renderCart();
+      }
+    }
   </script>
 </body>
 </html>
-
