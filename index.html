@@ -60,7 +60,7 @@
     .hero p{font-size:clamp(14px,2.2vw,20px);color:#d7dcef;margin:0 0 22px}
     .cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
     .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;font-weight:700;transition:var(--tr);border:2px solid var(--accent);background:var(--accent);color:var(--primary)}
-    /* прозора "glass" кнопка */
+    /* прозрачная "glass" кнопка */
     .btn.ghost{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));color:#fff;border:1.5px solid rgba(212,175,55,.55);box-shadow:0 10px 24px rgba(212,175,55,.18);backdrop-filter:blur(6px)}
     .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(212,175,55,.25)}
     .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:28px}
@@ -74,7 +74,7 @@
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
     .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
     .grid-1{display:grid;grid-template-columns:1fr;gap:18px}
-    .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .25s, box-shadow .25s;height:100%;display:flex;flex-direction:column;color:#e8ecf8}
+    .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .25s, box-shadow .25s;height:100%;display:flex;flex-direction:column;color:#e8ecf8; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease;}
     .card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(2,6,23,.16)}
     .card .media{height:200px;background:#16233c center/cover no-repeat}
     .card .body{padding:18px;display:flex;flex-direction:column;gap:10px;flex:1}
@@ -111,7 +111,7 @@
     .chat-body{padding:14px;overflow:auto;display:grid;gap:10px}
     .chat-row{display:grid;gap:6px}
     .chat-row input,.chat-row select,.chat-row textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff}
-    .chat-actions{display:flex;gap:10px;justify-content:flex-end;padding:12px}
+    .chat-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;padding:12px}
     .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-size:.78rem}
     /* MODALS (checkout) */
     .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.45);opacity:0;visibility:hidden;transition:var(--tr);z-index:1002;padding:14px}
@@ -191,18 +191,171 @@
     .translate-widget i {
       color: var(--accent);
     }
+    /* OFFER TRIGGER */
+    .offer-trigger {
+      position: fixed;
+      bottom: 80px;
+      left: 20px;
+      background: var(--accent);
+      color: var(--primary);
+      padding: 10px 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: pointer;
+      z-index: 1000;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+    }
+    
+    /* NOTIFICATION */
+    .notification {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: var(--primary);
+      padding: 12px 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 1002;
+      font-weight: 600;
+      max-width: 80%;
+      text-align: center;
+    }
+    
+    /* LOADER */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(11, 18, 32, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    .loader.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .loader-spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(212, 175, 55, 0.3);
+      border-radius: 50%;
+      border-top-color: var(--accent);
+      animation: spin 1s ease-in-out infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    /* BLOG MODAL STYLES */
+    #blogModal .modal-body {
+      padding: 20px;
+    }
+    
+    #blogModal .media {
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    #blogModalContent h3 {
+      color: var(--accent);
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    
+    #blogModalContent p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    
+    #shareModal .socials {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      transition: var(--tr);
+      text-decoration: none;
+    }
+    
+    #shareModal .socials:hover {
+      background: var(--accent);
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    #articleLink {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding: 10px 15px;
+      font-family: inherit;
+      outline: none;
+    }
+    
+    #articleLink:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+    }
+    
     /* RESPONSIVE */
     @media (max-width:1024px){.grid-3{grid-template-columns:repeat(2,1fr)}.contact-wrap{grid-template-columns:1fr}.f-top{grid-template-columns:1fr 1fr}}
     @media (max-width:820px){.nav-links,.lang-switch,.cart{display:none}.hamburger{display:flex}}
-    @media (max-width:640px){.grid-2,.grid-3{grid-template-columns:1fr}.row{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.f-top{grid-template-columns:1fr}.pay-grid{grid-template-columns:1fr}}
+    @media (max-width:640px){
+      .grid-2,.grid-3{grid-template-columns:1fr}.row{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.f-top{grid-template-columns:1fr}.pay-grid{grid-template-columns:1fr}
+      .chat-actions .btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+      }
+      .chat-panel {
+        width: 92vw;
+        right: 4vw;
+      }
+      .offer-trigger {
+        bottom: 70px;
+        left: 10px;
+        right: 10px;
+        justify-content: center;
+      }
+      #blogModal .modal-card {
+        width: 95vw;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-spinner"></div>
+  </div>
+  
   <!-- PARTICLES BACKGROUND -->
   <div id="particles-js"></div>
   <!-- AUDIO (Deep House 2025) -->
   <!-- замініть шлях на свій файл MP3 -->
-  <audio id="bgAudio" src="Moby - Porcelain (SemTex Remix) [CHILL]" loop preload="auto"></audio>
+  <audio id="bgAudio" src="666.mp3" loop preload="auto"></audio>
   <div id="musicTip" class="music-tip">Tap / Click to enable music 🔊</div>
   
   <!-- MUSIC BUTTON -->
@@ -416,7 +569,7 @@
             <div class="muted"><i class="fa-regular fa-calendar"></i> 15/06/2025</div>
             <div class="title" data-translate="blog1Title">Top 10 míst na léto v Evropě</div>
             <p class="muted" data-translate="blog1Desc">Od Středomoří po Alpy — výběr must-see.</p>
-            <a class="btn ghost" href="#" data-translate="readMore">Číst dál</a>
+            <a class="btn ghost blog-read" href="#" data-blog-id="1" data-translate="readMore">Číst dál</a>
           </div>
         </article>
         <article class="card blog">
@@ -425,7 +578,7 @@
             <div class="muted"><i class="fa-regular fa-calendar"></i> 02/06/2025</div>
             <div class="title" data-translate="blog2Title">Jak sbalit kufr bez přetížení</div>
             <p class="muted" data-translate="blog2Desc">Seznam must-have + organizační triky.</p>
-            <a class="btn ghost" href="#" data-translate="readMore">Číst dál</a>
+            <a class="btn ghost blog-read" href="#" data-blog-id="2" data-translate="readMore">Číst dál</a>
           </div>
         </article>
         <article class="card blog">
@@ -434,7 +587,7 @@
             <div class="muted"><i class="fa-regular fa-calendar"></i> 20/05/2025</div>
             <div class="title" data-translate="blog3Title">Nej pláže pro dokonalý relax</div>
             <p class="muted" data-translate="blog3Desc">Maledivy, Karibik a tajné spoty.</p>
-            <a class="btn ghost" href="#" data-translate="readMore">Číst dál</a>
+            <a class="btn ghost blog-read" href="#" data-blog-id="3" data-translate="readMore">Číst dál</a>
           </div>
         </article>
       </div>
@@ -499,7 +652,7 @@
       <div class="f-top">
         <div>
           <div class="f-brand">
-            <div class="brand-badge" style="width:38px;height:38px"><img src="log.jpg" alt=""></div>
+            <div class="brand-badge" style="width:38px;height:38px"><img src="/log.jpg" alt=""></div>
             <strong>King Hous Travel</strong>
           </div>
           <p class="muted" data-translate="footerDesc">Exkluzivní cesty, wellness retreaty a městské víkendy. Základna — Brno, Česko.</p>
@@ -597,6 +750,97 @@
       </div>
     </div>
   </div>
+  
+  <!-- ПОПАП СПЕЦПРЕДЛОЖЕНИЯ -->
+  <div class="modal" id="offerModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <strong data-translate="specialOffer">Специальное предложение</strong>
+        <button class="icon-btn" id="closeOffer" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <h3 style="color: var(--accent); margin-top: 0;" data-translate="offerTitle">Скидка 10% на первую поездку!</h3>
+          <p data-translate="offerDesc">Оставьте свой email и получите промокод на скидку 10% на любой тур.</p>
+        </div>
+        <form id="offerForm">
+          <div style="margin-bottom: 15px;">
+            <label for="offerEmail" data-translate="yourEmail">Ваш email</label>
+            <input type="email" id="offerEmail" placeholder="your@email.com" required style="width: 100%;">
+          </div>
+          <button type="submit" class="btn" style="width: 100%;" data-translate="getDiscount">Получить скидку</button>
+        </form>
+        <div id="offerSuccess" style="display: none; text-align: center; margin-top: 15px; color: var(--accent); font-weight: 600;">
+          <span data-translate="promoCode">Промокод:</span> <strong id="promoCodeValue">TRAVEL10</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ПОСТОВ БЛОГА -->
+  <div class="modal" id="blogModal" aria-hidden="true">
+    <div class="modal-card" style="max-width: 900px;">
+      <div class="modal-head">
+        <strong id="blogModalTitle" data-translate="blogArticle">Статья блога</strong>
+        <button class="icon-btn" id="closeBlogModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body" style="max-height: 70vh; overflow-y: auto;">
+        <div id="blogModalImage" class="media" style="height: 300px; margin-bottom: 20px;"></div>
+        <div id="blogModalContent"></div>
+        <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+          <div id="blogModalMeta" class="muted"></div>
+          <button class="btn ghost" id="shareBlogPost" data-translate="shareArticle">
+            <i class="fa-solid fa-share-nodes"></i> Поделиться
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- МОДАЛЬНОЕ ОКНО ПОДЕЛИТЬСЯ СТАТЬЕЙ -->
+  <div class="modal" id="shareModal" aria-hidden="true">
+    <div class="modal-card" style="max-width: 500px;">
+      <div class="modal-head">
+        <strong data-translate="shareArticle">Поделиться статьей</strong>
+        <button class="icon-btn" id="closeShareModal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <p data-translate="shareVia">Поделиться через:</p>
+          <div style="display: flex; justify-content: center; gap: 15px; margin-top: 15px;">
+            <a href="#" id="shareFacebook" class="socials" style="text-decoration: none;">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" id="shareTwitter" class="socials" style="text-decoration: none;">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" id="shareLinkedIn" class="socials" style="text-decoration: none;">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="#" id="shareWhatsApp" class="socials" style="text-decoration: none;">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="#" id="copyLink" class="socials" style="text-decoration: none; cursor: pointer;">
+              <i class="fa-solid fa-link"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <label data-translate="directLink">Прямая ссылка:</label>
+          <div style="display: flex; margin-top: 8px;">
+            <input type="text" id="articleLink" readonly style="flex: 1; border-radius: 10px 0 0 10px;">
+            <button id="copyLinkBtn" class="btn" style="border-radius: 0 10px 10px 0; padding: 0 15px;">
+              <i class="fa-solid fa-copy"></i>
+            </button>
+          </div>
+          <div id="copyNotification" style="display: none; text-align: center; margin-top: 10px; color: var(--accent);">
+            <span data-translate="linkCopied">Ссылка скопирована!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <!-- LIBS -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
@@ -666,6 +910,9 @@
         countEl.textContent = cart.length;
         btn.textContent = translations[currentLang].added || 'Přidáno ✓';
         setTimeout(()=>btn.textContent=translations[currentLang].addToCart || 'Přidat',1200);
+        
+        // Сбрасываем флаг напоминания о корзине
+        localStorage.removeItem('kingHousCartReminderShown');
       });
     });
     const checkoutModal = document.getElementById('checkoutModal');
@@ -690,13 +937,59 @@
     form.addEventListener('submit', (e)=>{
       e.preventDefault(); 
       const email = form.email.value || 'zadaný kontakt';
-      note.textContent = (translations[currentLang].formSuccess || 'Děkujeme! Ozveme se na ') + email + '.'; 
+      
+      // Показываем уведомление об успешной отправке
+      const notification = document.createElement('div');
+      notification.className = 'notification';
+      notification.textContent = (translations[currentLang].formSuccess || 'Děkujeme! Ozveme se na ') + email + '.';
+      document.body.appendChild(notification);
+      
+      // Удаляем уведомление через 5 секунд
+      setTimeout(() => {
+        notification.style.opacity = '0';
+        notification.style.transition = 'opacity 0.5s';
+        setTimeout(() => notification.remove(), 500);
+      }, 5000);
+      
       form.reset();
     });
     /* ===== Chatbot ===== */
     const chatFab = document.getElementById('chatFab'), chatPanel = document.getElementById('chatPanel'), chatClose = document.getElementById('chatClose');
-    chatFab.addEventListener('click', ()=> chatPanel.classList.toggle('show'));
-    chatClose.addEventListener('click', ()=> chatPanel.classList.remove('show'));
+    chatFab.addEventListener('click', ()=>{ 
+      loadChatData(); // Загружаем сохраненные данные
+      chatPanel.classList.toggle('show'); 
+    });
+    chatClose.addEventListener('click', ()=>{
+      saveChatData(); // Сохраняем данные при закрытии
+      chatPanel.classList.remove('show'); 
+    });
+    
+    // Сохранение данных чата при закрытии
+    function saveChatData() {
+      const chatData = {
+        place: document.getElementById('bPlace').value,
+        from: document.getElementById('bFrom').value,
+        to: document.getElementById('bTo').value,
+        people: document.getElementById('bPeople').value,
+        budget: document.getElementById('bBudget').value,
+        notes: document.getElementById('bNotes').value
+      };
+      localStorage.setItem('kingHousChatData', JSON.stringify(chatData));
+    }
+    // Восстановление данных при открытии чата
+    function loadChatData() {
+      const savedData = localStorage.getItem('kingHousChatData');
+      if (savedData) {
+        const chatData = JSON.parse(savedData);
+        document.getElementById('bPlace').value = chatData.place || '';
+        document.getElementById('bFrom').value = chatData.from || '';
+        document.getElementById('bTo').value = chatData.to || '';
+        document.getElementById('bPeople').value = chatData.people || '2';
+        document.getElementById('bBudget').value = chatData.budget || '';
+        document.getElementById('bNotes').value = chatData.notes || '';
+      }
+    }
+    
     function buildMessage(){
       const place = document.getElementById('bPlace').value || '-';
       const from = document.getElementById('bFrom').value || '-';
@@ -888,7 +1181,20 @@
         wishes: "Přání",
         chatMessage: "Dobrý den! Chci zájezd.",
         contactInfo: "Kontakt",
-        quickContacts: "Rychlé kontakty"
+        quickContacts: "Rychlé kontakty",
+        specialOffer: "Speciální nabídka",
+        offerTitle: "Sleva 10% na první cestu!",
+        offerDesc: "Zadejte svůj e-mail a získejte slevový kód 10% na jakoukoli cestu.",
+        yourEmail: "Váš e-mail",
+        getDiscount: "Získat slevu",
+        promoCode: "Slevový kód:",
+        cartReminder: "Máte položky v košíku. Dokončete objednávku!",
+        completeOrder: "Dokončit objednávku",
+        blogArticle: "Статья блога",
+        shareArticle: "Поделиться",
+        shareVia: "Поделиться через:",
+        directLink: "Прямая ссылка:",
+        linkCopied: "Ссылка скопирована!"
       },
       de: {
         home: "Startseite",
@@ -979,7 +1285,20 @@
         wishes: "Wünsche",
         chatMessage: "Guten Tag! Ich möchte eine Reise buchen.",
         contactInfo: "Kontakt",
-        quickContacts: "Schnellkontakte"
+        quickContacts: "Schnellkontakte",
+        specialOffer: "Sonderangebot",
+        offerTitle: "10% Rabatt auf die erste Reise!",
+        offerDesc: "Hinterlassen Sie Ihre E-Mail und erhalten Sie einen Gutscheincode für 10% Rabatt auf jede Reise.",
+        yourEmail: "Ihre E-Mail",
+        getDiscount: "Rabatt erhalten",
+        promoCode: "Gutscheincode:",
+        cartReminder: "Sie haben Artikel im Warenkorb. Schließen Sie die Bestellung ab!",
+        completeOrder: "Bestellung abschließen",
+        blogArticle: "Blog-Artikel",
+        shareArticle: "Teilen",
+        shareVia: "Teilen über:",
+        directLink: "Direkter Link:",
+        linkCopied: "Link kopiert!"
       },
       en: {
         home: "Home",
@@ -1070,7 +1389,20 @@
         wishes: "Wishes",
         chatMessage: "Hello! I want to book a tour.",
         contactInfo: "Contact",
-        quickContacts: "Quick contacts"
+        quickContacts: "Quick contacts",
+        specialOffer: "Special Offer",
+        offerTitle: "10% discount on your first trip!",
+        offerDesc: "Leave your email and get a discount code for 10% off any tour.",
+        yourEmail: "Your email",
+        getDiscount: "Get discount",
+        promoCode: "Promo code:",
+        cartReminder: "You have items in your cart. Complete your order!",
+        completeOrder: "Complete order",
+        blogArticle: "Blog Article",
+        shareArticle: "Share",
+        shareVia: "Share via:",
+        directLink: "Direct Link:",
+        linkCopied: "Link copied!"
       },
       es: {
         home: "Inicio",
@@ -1161,7 +1493,20 @@
         wishes: "Deseos",
         chatMessage: "¡Hola! Quiero reservar un tour.",
         contactInfo: "Contacto",
-        quickContacts: "Contactos rápidos"
+        quickContacts: "Contactos rápidos",
+        specialOffer: "Oferta especial",
+        offerTitle: "¡10% de descuento en tu primer viaje!",
+        offerDesc: "Deja tu correo electrónico y obtén un código de descuento del 10% en cualquier tour.",
+        yourEmail: "Tu correo electrónico",
+        getDiscount: "Obtener descuento",
+        promoCode: "Código promocional:",
+        cartReminder: "Tienes artículos en tu carrito. ¡Completa tu pedido!",
+        completeOrder: "Completar pedido",
+        blogArticle: "Artículo del blog",
+        shareArticle: "Compartir",
+        shareVia: "Compartir a través de:",
+        directLink: "Enlace directo:",
+        linkCopied: "¡Enlace copiado!"
       },
       fr: {
         home: "Accueil",
@@ -1252,7 +1597,20 @@
         wishes: "Souhaits",
         chatMessage: "Bonjour! Je veux réserver un circuit.",
         contactInfo: "Contact",
-        quickContacts: "Contacts rapides"
+        quickContacts: "Contacts rapides",
+        specialOffer: "Offre spéciale",
+        offerTitle: "10% de réduction sur votre premier voyage!",
+        offerDesc: "Laissez votre e-mail et obtenez un code de réduction de 10% sur tout circuit.",
+        yourEmail: "Votre e-mail",
+        getDiscount: "Obtenir la réduction",
+        promoCode: "Code promo:",
+        cartReminder: "Vous avez des articles dans votre panier. Finalisez votre commande!",
+        completeOrder: "Finaliser la commande",
+        blogArticle: "Article de blog",
+        shareArticle: "Partager",
+        shareVia: "Partager via:",
+        directLink: "Lien direct:",
+        linkCopied: "Lien copié!"
       },
       it: {
         home: "Home",
@@ -1343,7 +1701,20 @@
         wishes: "Desideri",
         chatMessage: "Ciao! Voglio prenotare un tour.",
         contactInfo: "Contatto",
-        quickContacts: "Contatti rapidi"
+        quickContacts: "Contatti rapidi",
+        specialOffer: "Offerta speciale",
+        offerTitle: "10% di sconto sul tuo primo viaggio!",
+        offerDesc: "Lascia la tua email e ottieni un codice sconto del 10% su qualsiasi tour.",
+        yourEmail: "La tua email",
+        getDiscount: "Ottieni sconto",
+        promoCode: "Codice promozionale:",
+        cartReminder: "Hai articoli nel carrello. Completa il tuo ordine!",
+        completeOrder: "Completa ordine",
+        blogArticle: "Articolo del blog",
+        shareArticle: "Condividi",
+        shareVia: "Condividi tramite:",
+        directLink: "Link diretto:",
+        linkCopied: "Link copiato!"
       },
       pl: {
         home: "Strona główna",
@@ -1434,7 +1805,20 @@
         wishes: "Życzenia",
         chatMessage: "Dzień dobry! Chcę zarezerwować wycieczkę.",
         contactInfo: "Kontakt",
-        quickContacts: "Szybkie kontakty"
+        quickContacts: "Szybkie kontakty",
+        specialOffer: "Oferta specjalna",
+        offerTitle: "10% zniżki na pierwszą podróż!",
+        offerDesc: "Zostaw swój e-mail i otrzymaj kod rabatowy 10% na każdą wycieczkę.",
+        yourEmail: "Twój e-mail",
+        getDiscount: "Uzyskaj zniżkę",
+        promoCode: "Kod promocyjny:",
+        cartReminder: "Masz przedmioty w koszyku. Ukończ zamówienie!",
+        completeOrder: "Ukończ zamówienie",
+        blogArticle: "Artykuł bloga",
+        shareArticle: "Udostępnij",
+        shareVia: "Udostępnij przez:",
+        directLink: "Bezpośredni link:",
+        linkCopied: "Link skopiowany!"
       },
       pt: {
         home: "Início",
@@ -1457,7 +1841,7 @@
         service1Desc: "Rotas adaptadas ao seu estilo e orçamento.",
         service2Title: "Reservas de hotéis",
         service2Desc: "Parceiros e resorts verificados.",
-        service3Title: "Voos e seguro",
+        service3Title: "Voo e seguro",
         service3Desc: "Voos ótimos + seguro de viagem.",
         moreInfo: "Mais",
         toursTitle: "Passeios populares",
@@ -1477,7 +1861,7 @@
         blog1Desc: "Do Mediterrâneo aos Alpes — uma seleção de must-see.",
         blog2Title: "Como fazer uma mala sem excesso de bagagem",
         blog2Desc: "Lista de must-have + truques de organização.",
-        blog3Title: "Melhores praias para relaxamento perfeito",
+        blog3Title: "Melhores praias para um relaxamento perfeito",
         blog3Desc: "Maldivas, Caribe e lugares secretos.",
         readMore: "Leia mais",
         contactTitle: "Entre em contato",
@@ -1511,7 +1895,7 @@
         cardCvv: "CVV",
         payButton: "Pagar",
         cardError: "Erro: verifique os dados do cartão.",
-        paymentSuccess: "Pagamento no modo demo foi bem-sucedido ✅. Enviaremos uma confirmação por e-mail.",
+        paymentSuccess: "O pagamento no modo demo foi bem-sucedido ✅. Enviaremos uma confirmação por e-mail.",
         otherPayment: "Outros métodos",
         paymentDesc: "Você pode pagar via PayPal ou transferência bancária SEPA em EUR.",
         paypalRequest: "Solicitar fatura PayPal",
@@ -1525,7 +1909,20 @@
         wishes: "Desejos",
         chatMessage: "Olá! Quero reservar um passeio.",
         contactInfo: "Contato",
-        quickContacts: "Contatos rápidos"
+        quickContacts: "Contatos rápidos",
+        specialOffer: "Oferta especial",
+        offerTitle: "10% de desconto na sua primeira viagem!",
+        offerDesc: "Deixe seu e-mail e receba um código de desconto de 10% em qualquer passeio.",
+        yourEmail: "Seu e-mail",
+        getDiscount: "Obter desconto",
+        promoCode: "Código promocional:",
+        cartReminder: "Você tem itens no carrinho. Complete seu pedido!",
+        completeOrder: "Completar pedido",
+        blogArticle: "Artigo do blog",
+        shareArticle: "Compartilhar",
+        shareVia: "Compartilhar via:",
+        directLink: "Link direto:",
+        linkCopied: "Link copiado!"
       },
       ru: {
         home: "Главная",
@@ -1616,7 +2013,20 @@
         wishes: "Пожелания",
         chatMessage: "Здравствуйте! Я хочу забронировать тур.",
         contactInfo: "Контакт",
-        quickContacts: "Быстрые контакты"
+        quickContacts: "Быстрые контакты",
+        specialOffer: "Специальное предложение",
+        offerTitle: "Скидка 10% на первую поездку!",
+        offerDesc: "Оставьте свой email и получите промокод на скидку 10% на любой тур.",
+        yourEmail: "Ваш email",
+        getDiscount: "Получить скидку",
+        promoCode: "Промокод:",
+        cartReminder: "У вас есть товары в корзине. Завершите оформление заказа!",
+        completeOrder: "Завершить заказ",
+        blogArticle: "Статья блога",
+        shareArticle: "Поделиться",
+        shareVia: "Поделиться через:",
+        directLink: "Прямая ссылка:",
+        linkCopied: "Ссылка скопирована!"
       },
       uk: {
         home: "Головна",
@@ -1697,7 +2107,7 @@
         otherPayment: "Інші способи",
         paymentDesc: "Ви можете оплатити через PayPal або банківський переказ SEPA в EUR.",
         paypalRequest: "Запросити рахунок PayPal",
-        invoiceRequest: "Напишіть нам для виставлення рахунку з реквізитами.",
+        invoiceRequest: "Напишіть нам для виставлення рахунку з реквизитами.",
         cryptoPayment: "USDT TRC20 (за бажанням)",
         destination: "Куди ви хочете поїхати?",
         from: "З",
@@ -1707,7 +2117,20 @@
         wishes: "Побажання",
         chatMessage: "Доброго дня! Я хочу забронювати тур.",
         contactInfo: "Контакт",
-        quickContacts: "Швидкі контакти"
+        quickContacts: "Швидкі контакти",
+        specialOffer: "Спеціальна пропозиція",
+        offerTitle: "Знижка 10% на першу поїздку!",
+        offerDesc: "Залиште свій email і отримайте промокод на знижку 10% на будь-який тур.",
+        yourEmail: "Ваш email",
+        getDiscount: "Отримати знижку",
+        promoCode: "Промокод:",
+        cartReminder: "У вас є товари в кошику. Завершіть оформлення замовлення!",
+        completeOrder: "Завершити замовлення",
+        blogArticle: "Стаття блогу",
+        shareArticle: "Поділитися",
+        shareVia: "Поділитися через:",
+        directLink: "Пряме посилання:",
+        linkCopied: "Посилання скопійовано!"
       },
       zh: {
         home: "首页",
@@ -1798,7 +2221,20 @@
         wishes: "愿望",
         chatMessage: "你好！我想预订旅游。",
         contactInfo: "联系方式",
-        quickContacts: "快速联系方式"
+        quickContacts: "快速联系方式",
+        specialOffer: "特别优惠",
+        offerTitle: "首次旅行享受10%折扣！",
+        offerDesc: "留下您的电子邮件，获取任何旅游的10%折扣代码。",
+        yourEmail: "您的电子邮件",
+        getDiscount: "获取折扣",
+        promoCode: "促销代码：",
+        cartReminder: "您的购物车中有商品。完成您的订单！",
+        completeOrder: "完成订单",
+        blogArticle: "博客文章",
+        shareArticle: "分享",
+        shareVia: "分享通过:",
+        directLink: "直接链接:",
+        linkCopied: "链接已复制!"
       },
       ja: {
         home: "ホーム",
@@ -1889,7 +2325,20 @@
         wishes: "願い",
         chatMessage: "こんにちは！ツアーを予約したいです。",
         contactInfo: "連絡先",
-        quickContacts: "クイックコンタクト"
+        quickContacts: "クイックコンタクト",
+        specialOffer: "特別オファー",
+        offerTitle: "初回旅行で10%割引！",
+        offerDesc: "メールアドレスを残して、どのツアーでも10%割引のコードを取得してください。",
+        yourEmail: "あなたのメールアドレス",
+        getDiscount: "割引を取得",
+        promoCode: "プロモーションコード：",
+        cartReminder: "カートに商品があります。注文を完了してください！",
+        completeOrder: "注文を完了",
+        blogArticle: "ブログ記事",
+        shareArticle: "共有",
+        shareVia: "共有方法:",
+        directLink: "直接リンク:",
+        linkCopied: "リンクがコピーされました!"
       },
       ko: {
         home: "홈",
@@ -1980,7 +2429,20 @@
         wishes: "희망 사항",
         chatMessage: "안녕하세요! 투어를 예약하고 싶습니다.",
         contactInfo: "연락처",
-        quickContacts: "빠른 연락처"
+        quickContacts: "빠른 연락처",
+        specialOffer: "특별 제안",
+        offerTitle: "첫 번째 여행에서 10% 할인!",
+        offerDesc: "이메일을 남기고 모든 투어에서 10% 할인 코드를 받으세요.",
+        yourEmail: "당신의 이메일",
+        getDiscount: "할인 받기",
+        promoCode: "프로모션 코드:",
+        cartReminder: "카트에 항목이 있습니다. 주문을 완료하세요!",
+        completeOrder: "주문 완료",
+        blogArticle: "블로그 기사",
+        shareArticle: "공유",
+        shareVia: "공유 방법:",
+        directLink: "직접 링크:",
+        linkCopied: "링크가 복사되었습니다!"
       },
       ar: {
         home: "الرئيسية",
@@ -2071,13 +2533,26 @@
         wishes: "الأمنيات",
         chatMessage: "مرحباً! أريد حجز جولة.",
         contactInfo: "معلومات الاتصال",
-        quickContacts: "جهات الاتصال السريعة"
+        quickContacts: "جهات الاتصال السريعة",
+        specialOffer: "عرض خاص",
+        offerTitle: "خصم 10% على رحلتك الأولى!",
+        offerDesc: "اترك بريدك الإلكتروني واحصل على رمز خصم 10% على أي جولة.",
+        yourEmail: "بريدك الإلكتروني",
+        getDiscount: "احصل على الخصم",
+        promoCode: "رمز ترويجي:",
+        cartReminder: "لديك عناصر في السلة. أكمل طلبك!",
+        completeOrder: "أكمل الطلب",
+        blogArticle: "مقال المدونة",
+        shareArticle: "مشاركة",
+        shareVia: "مشاركة عبر:",
+        directLink: "رابط مباشر:",
+        linkCopied: "تم نسخ الرابط!"
       },
       hi: {
         home: "होम",
         services: "सेवाएं",
         tours: "टूर",
-        reviews: "समीक्षाएं",
+        reviews: "रिव्यू",
         blog: "ब्लॉग",
         contact: "संपर्क करें",
         heroTitle: "हमारे साथ दुनिया की खोज करें",
@@ -2162,7 +2637,20 @@
         wishes: "इच्छाएं",
         chatMessage: "नमस्ते! मैं एक टूर बुक करना चाहता हूँ।",
         contactInfo: "संपर्क जानकारी",
-        quickContacts: "त्वरित संपर्क"
+        quickContacts: "त्वरित संपर्क",
+        specialOffer: "विशेष प्रस्ताव",
+        offerTitle: "पहली यात्रा पर 10% की छूट!",
+        offerDesc: "अपना ईमेल छोड़ें और किसी भी टूर पर 10% की छूट के लिए प्रोमो कोड प्राप्त करें।",
+        yourEmail: "आपका ईमेल",
+        getDiscount: "छूट प्राप्त करें",
+        promoCode: "प्रोमो कोड:",
+        cartReminder: "आपके कार्ट में आइटम हैं। अपना ऑर्डर पूरा करें!",
+        completeOrder: "ऑर्डर पूरा करें",
+        blogArticle: "ब्लॉग लेख",
+        shareArticle: "साझा करें",
+        shareVia: "इसके माध्यम से साझा करें:",
+        directLink: "सीधा लिंक:",
+        linkCopied: "लिंक कॉपी किया गया!"
       }
     };
     
@@ -2260,8 +2748,342 @@
         renderCart();
       }
     }
+    
+    // Создание триггера специального предложения
+    const offerTrigger = document.createElement('div');
+    offerTrigger.className = 'offer-trigger';
+    offerTrigger.innerHTML = '<i class="fa-solid fa-gift"></i> <span data-translate="getDiscount">Получить скидку 10%</span>';
+    document.body.appendChild(offerTrigger);
+    // Модальное окно предложения
+    const offerModal = document.getElementById('offerModal');
+    const closeOffer = document.getElementById('closeOffer');
+    const offerForm = document.getElementById('offerForm');
+    const offerSuccess = document.getElementById('offerSuccess');
+    // Показ модального окна
+    offerTrigger.addEventListener('click', () => {
+      offerModal.classList.add('show');
+    });
+    // Закрытие модального окна
+    closeOffer.addEventListener('click', () => {
+      offerModal.classList.remove('show');
+    });
+    // Обработка формы предложения
+    offerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('offerEmail').value;
+      
+      // Здесь можно добавить код для отправки email на сервер
+      
+      // Показываем промокод
+      offerForm.style.display = 'none';
+      offerSuccess.style.display = 'block';
+      
+      // Сохраняем email в localStorage
+      localStorage.setItem('kingHousOfferEmail', email);
+      
+      // Закрываем окно через 5 секунд
+      setTimeout(() => {
+        offerModal.classList.remove('show');
+      }, 5000);
+    });
+    // Показываем триггер через 10 секунд после загрузки страницы
+    setTimeout(() => {
+      // Проверяем, не показывали ли мы уже предложение
+      if (!localStorage.getItem('kingHousOfferShown')) {
+        offerTrigger.style.display = 'flex';
+        localStorage.setItem('kingHousOfferShown', 'true');
+      }
+    }, 10000);
+    
+    // Функция проверки брошенной корзины
+    function checkAbandonedCart() {
+      // Проверяем, есть ли что-то в корзине
+      if (cart.length > 0 && !localStorage.getItem('kingHousCartReminderShown')) {
+        // Показываем уведомление о брошенной корзине через 1 час
+        setTimeout(() => {
+          const reminder = document.createElement('div');
+          reminder.className = 'notification';
+          
+          const lang = currentLang;
+          const message = translations[lang].cartReminder || "У вас есть товары в корзине. Завершите оформление заказа!";
+          const completeBtn = translations[lang].completeOrder || "Завершить заказ";
+          
+          reminder.innerHTML = `
+            <div>${message}</div>
+            <button class="btn" style="margin-top: 8px; padding: 6px 12px; font-size: 0.9rem;" onclick="document.getElementById('openCheckout').click(); this.parentElement.remove();">${completeBtn}</button>
+          `;
+          
+          document.body.appendChild(reminder);
+          
+          // Закрываем уведомление через 10 секунд
+          setTimeout(() => {
+            reminder.style.opacity = '0';
+            reminder.style.transition = 'opacity 0.5s';
+            setTimeout(() => reminder.remove(), 500);
+          }, 10000);
+          
+          // Запоминаем, что показали напоминание
+          localStorage.setItem('kingHousCartReminderShown', 'true');
+        }, 3600000); // 1 час в миллисекундах
+      }
+    }
+    // Вызываем функцию при загрузке страницы
+    document.addEventListener('DOMContentLoaded', checkAbandonedCart);
+    
+    // Функция показа/скрытия загрузчика
+    function showLoader() {
+      document.getElementById('loader').classList.add('active');
+    }
+    function hideLoader() {
+      document.getElementById('loader').classList.remove('active');
+    }
+    // Показываем загрузчик при отправке форм
+    document.getElementById('contactForm').addEventListener('submit', showLoader);
+    document.getElementById('offerForm').addEventListener('submit', showLoader);
+    // Скрываем загрузчик через 2 секунды (в реальности нужно после ответа сервера)
+    setTimeout(hideLoader, 2000);
+    
+    // Анимация элементов при прокрутке
+    const animatedElements = document.querySelectorAll('.card, .stat, .section-head');
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+    animatedElements.forEach(element => {
+      element.style.opacity = '0';
+      element.style.transform = 'translateY(20px)';
+      element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(element);
+    });
+    
+    // Данные для статей блога
+    const blogPosts = {
+      1: {
+        title: {
+          cz: "Top 10 míst na léto v Evropě",
+          de: "Top 10 Sommerziele in Europa",
+          en: "Top 10 summer destinations in Europe",
+          es: "Top 10 destinos de verano en Europa",
+          fr: "Top 10 des destinations d'été en Europe",
+          it: "Top 10 destinazioni estive in Europa",
+          pl: "Top 10 miejsc na lato w Europie",
+          pt: "Top 10 destinos de verão na Europa",
+          ru: "Топ-10 мест для лета в Европе",
+          uk: "Топ-10 місць для літа в Європі",
+          zh: "欧洲夏季十大目的地",
+          ja: "ヨーロッパの夏のトップ10 destinations",
+          ko: "유럽 여름 최고의 10곳",
+          ar: "أفضل 10 وجهات صيفية في أوروبا",
+          hi: "यूरोप में गर्मी के लिए टॉप 10 जगहें"
+        },
+        date: "15/06/2025",
+        image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=60",
+        content: {
+          cz: `<p>Léto se blíží a s ním i otázka, kam vyrazit na dovolenou. Přinášíme vám přehled nejkrásnějších evropských destinací, které si zamilujete.</p>
+                <h3>1. Santorini, Řecko</h3>
+                <p>Ikónické bílé domy s modrými střechami, dechberoucí západy slunce a průzračné moře. Santorini je synonymem pro romantickou dovolenou.</p>
+                <h3>2. Amalfské pobřeží, Itálie</h3>
+                <p>Útesy se zřítivající se do tyrkysového moře, malebné vesničky a vynikající kuchyně. Amalfi je ideální pro ty, kteří hledají kombinaci kultury a relaxace.</p>
+                <h3>3. Dubrovník, Chorvatsko</h3>
+                <p>Perla Jadranu, která okouzlí svými historickými hradbami a úzkými uličkami. Dubrovník je také skvělým výchozím bodem pro objevování chorvatských ostrovů.</p>
+                <p>A další místa jako Barcelona, Francouzská riviéra, Kréta, Mallorca, Azory a Madeira dokonale doplňují náš seznam.</p>`,
+          de: `<p>Der Sommer naht und mit ihm die Frage, wohin die Reise gehen soll. Wir präsentieren Ihnen eine Übersicht der schönsten europäischen Reiseziele, die Sie lieben werden.</p>
+                <h3>1. Santorin, Griechenland</h3>
+                <p>Ikone weiße Häuser mit blauen Dächern, atemberaubende Sonnenuntergänge und kristallklares Meer. Santorin ist ein Synonym für einen romantischen Urlaub.</p>
+                <h3>2. Amalfiküste, Italien</h3>
+                <p>Klippen, die steil ins türkisfarbene Meer abfallen, malerische Dörfer und hervorragende Küche. Amalfi ist ideal für diejenigen, die eine Kombination aus Kultur und Entspannung suchen.</p>
+                <h3>3. Dubrovnik, Kroatien</h3>
+                <p>Die Perle der Adria, die mit ihren historischen Mauern und engen Gassen begeistert. Dubrovnik ist auch ein hervorragender Ausgangspunkt für die Entdeckung der kroatischen Inseln.</p>
+                <p>Andere Orte wie Barcelona, die Französische Riviera, Kreta, Mallorca, die Azoren und Madeira vervollständigen unsere Liste perfekt.</p>`,
+          en: `<p>Summer is approaching and with it the question of where to go on vacation. We bring you an overview of the most beautiful European destinations that you will fall in love with.</p>
+                <h3>1. Santorini, Greece</h3>
+                <p>Iconic white houses with blue roofs, breathtaking sunsets and crystal clear sea. Santorini is synonymous with a romantic vacation.</p>
+                <h3>2. Amalfi Coast, Italy</h3>
+                <p>Cliffs plunging into the turquoise sea, picturesque villages and excellent cuisine. Amalfi is ideal for those looking for a combination of culture and relaxation.</p>
+                <h3>3. Dubrovnik, Croatia</h3>
+                <p>The Pearl of the Adriatic, which will captivate you with its historic walls and narrow streets. Dubrovnik is also a great starting point for exploring Croatian islands.</p>
+                <p>Other places like Barcelona, the French Riviera, Crete, Mallorca, the Azores and Madeira perfectly complete our list.</p>`,
+          // Добавьте переводы для других языков...
+        }
+      },
+      2: {
+        title: {
+          cz: "Jak sbalit kufr bez přetížení",
+          de: "Wie man den Koffer ohne Überladung packt",
+          en: "How to pack a suitcase without overloading",
+          // Добавьте переводы для других языков...
+        },
+        date: "02/06/2025",
+        image: "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1200&q=60",
+        content: {
+          cz: `<p>Sbalení kufru může být stresující zážitek, zejména pokud se snažíme zvládnout všechna omezení leteckých společností. Přinášíme vám několik tipů, jak na to.</p>
+                <h3>1. Plánujte ahead</h3>
+                <p>Vytvořte si seznam věcí, které si chcete vzít, a řiďte se jím. Tím předejdete zbytečným věcem a ušetříte místo.</p>
+                <h3>2. Rolujte oblečení</h3>
+                <p>Místo skládání oblečení ho zkuste stočit. Tím ušetříte až 30% místa a zároveň zabráníte mačkání.</p>
+                <h3>3. Využijte každý prostor</h3>
+                <p>Doplňky a drobnosti vložte do bot, do volných prostor mezi oblečením a do kapes.</p>`,
+          de: `<p>Das Packen eines Koffers kann eine stressige Erfahrung sein, besonders wenn man versucht, alle Einschränkungen der Fluggesellschaften zu beachten. Wir geben Ihnen einige Tipps, wie es geht.</p>
+                <h3>1. Planen Sie im Voraus</h3>
+                <p>Erstellen Sie eine Liste der Dinge, die Sie mitnehmen möchten, und halten Sie sich daran. So vermeiden Sie unnötige Gegenstände und sparen Platz.</p>
+                <h3>2. Rollen Sie Kleidung</h3>
+                <p>Anstatt Kleidung zu falten, versuchen Sie, sie aufzurollen. Dadurch sparen Sie bis zu 30% Platz und vermeiden gleichzeitig Knitterfalten.</p>
+                <h3>3. Nutzen Sie jeden Raum</h3>
+                <p>Stecken Sie Accessoires und Kleinkram in Schuhe, in freie Räume zwischen Kleidung und in Taschen.</p>`,
+          en: `<p>Packing a suitcase can be a stressful experience, especially when trying to comply with all airline restrictions. Here are some tips on how to do it.</p>
+                <h3>1. Plan ahead</h3>
+                <p>Make a list of things you want to take and stick to it. This will avoid unnecessary items and save space.</p>
+                <h3>2. Roll clothes</h3>
+                <p>Instead of folding clothes, try rolling them. This will save up to 30% space and also prevent wrinkling.</p>
+                <h3>3. Use every space</h3>
+                <p>Put accessories and small items in shoes, in the spaces between clothes and in pockets.</p>`,
+          // Добавьте переводы для других языков...
+        }
+      },
+      3: {
+        title: {
+          cz: "Nej pláže pro dokonalý relax",
+          de: "Beste Strände für perfekte Entspannung",
+          en: "Best beaches for perfect relaxation",
+          // Добавьте переводы для других языков...
+        },
+        date: "20/05/2025",
+        image: "https://images.unsplash.com/photo-1519451243450-1a7c1a6b8a9c?auto=format&fit=crop&w=1200&q=60",
+        content: {
+          cz: `<p>Hledáte ideální místo pro letní dovolenou? Přinášíme vám přehled nejkrásnějších pláží světa, kde si užijete dokonalý relax.</p>
+                <h3>1. Whitehaven Beach, Austrálie</h3>
+                <p>Jedna z nejčistších pláží světa s bílým křemičkovým pískem a tyrkysovou vodou. Ideální pro ty, kteří hledají klid a přírodu.</p>
+                <h3>2. Anse Source d'Argent, Seychely</h3>
+                <p>Pláž s obřími žulovými balvany a průzračnou vodou. Jedno z nejfotografovanějších míst na světě.</p>
+                <h3>3. Grace Bay, Turks a Caicos</h3>
+                <p>7 km dlouhá pláž s bílým pískem a průzračnou vodou. Ideální pro vodní sporty a šnorchlování.</p>`,
+          de: `<p>Sie suchen nach dem idealen Ort für den Sommerurlaub? Wir präsentieren Ihnen eine Übersicht der schönsten Strände der Welt, wo Sie perfekte Entspannung genießen können.</p>
+                <h3>1. Whitehaven Beach, Australien</h3>
+                <p>Einer der saubersten Strände der Welt mit weißem Kieselsand und türkisfarbenem Wasser. Ideal für diejenigen, die Ruhe und Natur suchen.</p>
+                <h3>2. Anse Source d'Argent, Seychellen</h3>
+                <p>Ein Strand mit riesigen Granitfelsen und kristallklarem Wasser. Einer der meistfotografierten Orte der Welt.</p>
+                <h3>3. Grace Bay, Turks und Caicos</h3>
+                <p>7 km langer Strand mit weißem Sand und kristallklarem Wasser. Ideal für Wassersport und Schnorcheln.</p>`,
+          en: `<p>Looking for the perfect place for a summer vacation? We bring you an overview of the most beautiful beaches in the world where you can enjoy perfect relaxation.</p>
+                <h3>1. Whitehaven Beach, Australia</h3>
+                <p>One of the cleanest beaches in the world with white silica sand and turquoise water. Ideal for those looking for peace and nature.</p>
+                <h3>2. Anse Source d'Argent, Seychelles</h3>
+                <p>A beach with giant granite boulders and crystal clear water. One of the most photographed places in the world.</p>
+                <h3>3. Grace Bay, Turks and Caicos</h3>
+                <p>7 km long beach with white sand and crystal clear water. Ideal for water sports and snorkeling.</p>`,
+          // Добавьте переводы для других языков...
+        }
+      }
+    };
+
+    // Функционал для модальных окон блога
+    const blogModal = document.getElementById('blogModal');
+    const closeBlogModal = document.getElementById('closeBlogModal');
+    const shareBlogPost = document.getElementById('shareBlogPost');
+    const shareModal = document.getElementById('shareModal');
+    const closeShareModal = document.getElementById('closeShareModal');
+    const copyLinkBtn = document.getElementById('copyLinkBtn');
+    const articleLink = document.getElementById('articleLink');
+    const copyNotification = document.getElementById('copyNotification');
+    let currentBlogPost = null;
+
+    // Открытие модального окна блога
+    document.querySelectorAll('.blog-read').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const postId = btn.dataset.blogId;
+        const post = blogPosts[postId];
+        
+        if (post) {
+          currentBlogPost = postId;
+          openBlogModal(post);
+        }
+      });
+    });
+
+    function openBlogModal(post) {
+      const lang = currentLang;
+      document.getElementById('blogModalTitle').textContent = post.title[lang] || post.title.en;
+      document.getElementById('blogModalImage').style.backgroundImage = `url('${post.image}')`;
+      document.getElementById('blogModalContent').innerHTML = post.content[lang] || post.content.en;
+      document.getElementById('blogModalMeta').innerHTML = `<i class="fa-regular fa-calendar"></i> ${post.date}`;
+      
+      blogModal.classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Закрытие модального окна блога
+    closeBlogModal.addEventListener('click', () => {
+      blogModal.classList.remove('show');
+      document.body.style.overflow = '';
+    });
+
+    // Открытие модального окна "Поделиться"
+    shareBlogPost.addEventListener('click', () => {
+      if (currentBlogPost) {
+        const post = blogPosts[currentBlogPost];
+        const pageTitle = post.title[currentLang] || post.title.en;
+        const url = `${window.location.origin}${window.location.pathname}#blog-${currentBlogPost}`;
+        
+        articleLink.value = url;
+        
+        // Настройка кнопок соцсетей
+        document.getElementById('shareFacebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+        document.getElementById('shareTwitter').href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(pageTitle)}`;
+        document.getElementById('shareLinkedIn').href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+        document.getElementById('shareWhatsApp').href = `https://wa.me/?text=${encodeURIComponent(pageTitle + ' ' + url)}`;
+        
+        shareModal.classList.add('show');
+      }
+    });
+
+    // Закрытие модального окна "Поделиться"
+    closeShareModal.addEventListener('click', () => {
+      shareModal.classList.remove('show');
+    });
+
+    // Копирование ссылки
+    copyLinkBtn.addEventListener('click', () => {
+      articleLink.select();
+      document.execCommand('copy');
+      
+      copyNotification.style.display = 'block';
+      setTimeout(() => {
+        copyNotification.style.display = 'none';
+      }, 2000);
+    });
+
+    // Копирование ссылки по клику на иконку
+    document.getElementById('copyLink').addEventListener('click', () => {
+      articleLink.select();
+      document.execCommand('copy');
+      
+      copyNotification.style.display = 'block';
+      setTimeout(() => {
+        copyNotification.style.display = 'none';
+      }, 2000);
+    });
+
+    // Закрытие модальных окон при клике вне их
+    [blogModal, shareModal].forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.remove('show');
+          if (modal === blogModal) {
+            document.body.style.overflow = '';
+          }
+        }
+      });
+    });
   </script>
 </body>
 </html>
-
-
